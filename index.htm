@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<title>Composant de référence ARIA</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" id="Cstyle" href="style.css" type="text/css" media="screen" title="style par defaut" />
+<link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" type="text/css" media="screen" />
+<script type="text/javascript" src="composant.js"></script>
+<script type="text/javascript" src="composant_config.js"></script>
+<script type="text/javascript" src="setContent.js"></script>
+<script src="highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="overlay" class="overlay"></div>
+<div id="screen" class="Cboth">
+	<ul id="Acc">
+		<li><a href="#Mcontent">Contenu</a></li>
+	</ul>
+	<header role="banner" class="Cboth">
+		<h1 class="Cboth"><img src="images/bloc-sgmap-2.jpg" alt="République Française - Premier Ministre - Secrétariat Général pour la Modernisation de l'Action Publique" /> <span>Ressource RGAA <br />Implémentation des composants ARIA</span></h1>
+	</header>
+	<!--navigation -->
+	<nav role="navigation" class="Cboth" aria-label="menu de navigation">
+		<ul id="menu" lang="en">
+			<li><a lang="fr" href="#presentation"><span class="bullet"><span class="Sbullet"></span></span>Présentation</a></li>
+			<li><a href="#slider"><span class="bullet"><span class="Sbullet"></span></span>slider</a></li>
+			<li><a href="#progressbar"><span class="bullet"><span class="Sbullet"></span></span>progressbar</a>
+			</li>
+			<li><a href="#dialog"><span class="bullet"><span class="Sbullet"></span></span>dialog/alertdialog</a></li>
+			<li><a href="#tabpanel"><span class="bullet"><span class="Sbullet"></span></span>tabpanel</a></li>
+			<li><a href="#tooltip"><span class="bullet"><span class="Sbullet"></span></span>tooltip</a></li>
+			<li><a href="#button"><span class="bullet"><span class="Sbullet"></span></span>button</a></li>
+		</ul>
+	</nav>
+	<div id="Mcontent" tabindex="-1">
+	<main role="main">
+		<section class="a42-component" id="presentation">
+			<header>
+				<div>
+					<h2 class="CTitre">Présentation</h2>
+					<ul>
+						<li><img src="images/t1-prev_gray.png" alt="" /></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" title="menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#slider"><img src="images/t1-next.png" alt="progressbar" title="slider" /></a></li>
+					</ul>
+				</div>
+			</header>
+				<p>Cette plateforme de test présente les implémentations des composants ARIA telles qu'elles sont définies par les motifs de conception.</p>
+				<p>Elle a permis d'établir les restitutions par défaut obtenues avec les technologies d'assistance définies par la base de référence.</p>
+				<p><strong>Note 1: </strong> certains enrichissements, nécessaires à une restitution correcte, sont décrits pour chaque composant. Ces enrichissements ne sont pas demandés par les motifs de conception ARIA car ils sont contextuels à la nature et l'utilisation du composant ou de ses contenus.</p>
+				<p><strong>Note 2: </strong> les interactions au clavier sont limitées à celles requises par le référentiel.</p>
+				<article role="article">
+					<h3>Aide</h3>
+					<p>Les sections de test sont toujours présentées de la même manière :</p>
+					<ol>
+						<li>(Titre 2) : Le nom du rôle correspondant au composant et une ancre d'accès direct à la zone de test.</li>
+						<li>une liste de navigation (composant précédent, accès au menu, composant suivant).</li>
+						<li>une brève description du composant.</li>
+						<li>(Titre 3) : Implémentation : description succinte de l'implémentation et enrichissements éventuels.</li>
+						<li>(Titre 3) : Test : la zone de test et les instructions de test.</li>
+						<li>(Titre 3 ou 4): description de l'implémentation HTML et JavaScript.</li></li>
+						<li>(Titre 3) : Référence : un lien vers la référence utilisée pour l'implémentation.</li>
+					</ol>
+				</article>
+			<footer>
+				<h4>Références</h4>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/">WAI-ARIA 1.0 Authoring Practices</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Slider -->
+		<section class="a42-component" id="slider" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Slider</span> <span>[<a href="#test0">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a class="a42-inboard" href="#presentation"><img src="images/t1-prev.png" alt="Presentation" title="Presentation" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" title="menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#progressbar"><img src="images/t1-next.png" alt="Progressbar" title="Progressbar"/></a></li>
+					</ul>
+				</div>
+				<p>Potentiomètre servant à augmenter ou diminuer une valeur</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Le potentiomètre permet d'indiquer le montant maximum</p>
+				<h3 id="test0" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler pour prendre le focus sur le curseur du potentiomètre</li>
+					<li>Augmenter la valeur avec les flêches <kbd>haut</kbd> et <kbd>droite</kbd></li>
+					<li>Diminuer la valeur avec les flêches <kbd>bas</kbd> et <kbd>gauche</kbd></li>
+				</ol>
+				<div id="Zslider">
+					<p id="sliderTitre">Choisir le tarif maximum recherché</p>
+					<div id="sliderRail">
+						<p id="sliderCurrent"><span>10 €</span></p>
+						<span id="sliderLine"></span>
+						<span class="acsa-cursor-button" id="sliderCursor" role="slider" aria-valuemin="10" aria-valuemax="198" aria-valuenow="0" aria-valuetext="0 €" tabindex="0" aria-labelledby="sliderTitre" data-acsa-unit="€" ><span class="sliderhover"></span></span>
+					</div>
+				</div>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+				<h3>Intégration</h3>
+				<pre>
+<code class="html">
+/* HTML */
+	&lt;p id="sliderTitre"&gt;Choisir le tarif maximum recherché&lt;/p&gt;
+	&lt;p id="sliderCurrent"&gt;&lt;span&gt;10 €&lt;/span&gt;&lt;/p&gt;
+	&lt;span id="sliderLine"&gt;&lt;/span&gt;
+	&lt;span class="acsa-cursor-button" id="sliderCursor" role="slider" aria-valuemin="10" aria-valuemax="198" 
+	aria-valuenow="0" aria-valuetext="0 €" tabindex="0" aria-labelledby="sliderTitre" data-acsa-unit="€" &gt;&lt;span class="sliderhover"&gt;&lt;/span&gt;&lt;/span&gt;
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+slider : {
+	//CSS
+	cursor : 'acsa-cursor-button',
+	//data-
+	unit : 'data-acsa-unit'
+}
+/* Initialisation
+- required obj : slider component (this)
+- required keys : key event
+- required posOrigin : initial x offsetleft
+- required posMax : final right x position
+- required unit : value for aria-valuetext
+- required step : relative step unit
+*/
+var listSlider = document.getElementsByClassName( acsa_config.slider.cursor );
+for ( var i = 0, len = listSlider.length;	i < len; i++ ){
+	listSlider[i].addEventListener( 'focus', function setListSlider(){
+		var slider = new Slider ( this );
+		slider.set( this, slider.keys, slider.posOrigin, slider.posMax, slider.unit, slider.step );
+	}, false );
+}
+</code>
+</pre>
+			<footer>
+				<h4>Références</h4>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#slider">WAI-ARIA 1.0 Authoring Practices - Design Pattern - slider</a></li>
+				</ul>
+			</footer>
+		</section>
+<!--Progressbar-->
+		<section class="a42-component" id="progressbar" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Progressbar</span> <span>[<a href="#test1">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#presentation"><img src="images/t1-prev.png" alt="presentation" title="presentation" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#dialog"><img src="images/t1-next.png" alt="dialog" title="dialog" /></a></li>
+					</ul>
+				</div>
+				<p>Barre de progression pouvant être utilisée comme indication de téléchargement ou de mise à jour.</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>
+					Un bouton permet de mettre à jour une zone d'actualités. Durant le temps nécessaire à la mise à jour une barre de progression est affichée et décompte la mise à jour.
+				</p>
+				<h4>Enrichissement</h4>
+				<ol>
+					<li>A la fin de la mise à jour, le focus est donné sur la zone qui vient d'être mise à jour.</li>
+				</ol>
+				<h3 id="test1" tabindex="-1">Test</h3>
+				<h4>Instructions</h4>
+				<ol>
+					<li>Cliquez sur le bouton ci-dessous pour lancer la mise à jour</li>
+				</ol>
+				<p><button id="Cprogressbar" type="button">Mettre à jour les actualités</button></p>
+				<div class="progressbar">
+					<article role="article" id="Zmaj" aria-describedby="Pgbr">
+						<h4 id="actuTitre" tabindex="-1">Actualités</h4>
+						<p id="actuprogression">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod purus ac enim malesuada, eu lacinia tellus ullamcorper. Proin pulvinar bibendum lacus, sed consectetur sapien interdum in. In id sem at erat imperdiet elementum vitae imperdiet dui. Nullam mattis ultricies justo non pellentesque. Sed mollis urna vitae leo semper, nec fermentum tellus imperdiet. Phasellus eget vehicula sapien. Nulla convallis, mauris a sodales placerat, nisl nulla aliquet nisi, sit amet faucibus orci ante a elit. Integer vel gravida elit, a aliquet purus. Mauris sed lectus purus. Pellentesque efficitur magna non dolor consequat mattis. 
+						</p>
+					</article>
+					<div id="Pgbr" tabindex="-1" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" aria-labelledby="actuTitre">
+						<p>En cours de mise à jour</p>
+						<div class="progression acsa-progress-indicator"></div>
+					</div>
+				</div>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+				<h3>Intégration</h3>
+<pre>
+<code class="html">
+/* HTML */
+&lt;article role="article" id="Zmaj" aria-describedby="Pgbr"&gt;
+	&lt;h4 id="actuTitre" tabindex="-1"&gt;Actualités&lt;/h4&gt;
+	&lt;p id="actuprogression"&gt; [conten updated]&lt;/p&gt;
+&lt;/article&gt;
+&lt;div id="Pgbr" tabindex="-1" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" aria-labelledby="actuTitre"&gt;
+	&lt;p&gt;En cours de mise à jour&lt;/p&gt;
+	&lt;div class="progression acsa-progress-indicator"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="javascript">
+/* Javascript */
+//Paramètres (composant_config.js)
+progressBar : {
+	//CSS
+	indicator : 'acsa-progress-indicator'
+}
+/*
+Initialisation
+- required obj : the progressbar component
+- optionnal returnTo : element focus result
+- optionnal contenerMaj : target element for aria-busy value
+*/
+document.getElementById('Cprogressbar').addEventListener ( 'click', function setprogressbar(){
+	var contenerMaj = document.getElementById( 'Zmaj' );
+	var obj = document.getElementById( 'Pgbr' );
+	var returnTo = document.getElementById( 'actuTitre' );
+	var progressBar = new Progressbar( obj, returnTo, contenerMaj );
+}, false );
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a href="http://www.w3.org/WAI/PF/aria/roles#progressbar" lang="en">ARIA - The roles Model - role progressbar</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Dialog -->
+		<section class="a42-component" id="dialog" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Dialog</span> <span>[<a href="#test2">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#progressbar"><img src="images/t1-prev.png" alt="progressbar" title="progressbar" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#tabpanel"><img src="images/t1-next.png" alt="tabpanel" title="tabpanel" /></a></li>
+					</ul>
+				</div>
+				<p>Une fenêtre destinée à diffuser un message de confirmation par exemple ou recueillir une saisie utilisateur.</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Le premier composant est une fenêtre d'alerte modale qui demande une confirmation.</p>
+				<p>Le seconde composant est une fenêtre de dialogue modale utilisée pour une procédure de connection.</p>
+				<h4>Enrichissements</h4>
+				<ol>
+				<li>La fenêtre de dialogue modale utilise une propriété <code>aria-describedby</code> pour vocaliser un contenu d'aide à l'ouverture de la fenêtre</li>
+				</ol>
+				<h3 id="test2" tabindex="-1">Test</h3>
+				<h4>Instructions</h4>
+				<ol>
+				<li>Utiliser les deux boutons ci-dessous pour ouvrir les deux types de fenêtres</li>
+				<li>Attention : les boutons de confirmation, les liens et les champs de formulaire proposés dans le contenu ne sont pas fonctionnels.</li>
+				</ol>
+				<p><button id="Calertdialog" class="acsa-dial-button" data-acsa-target="Fenetrealertdialog" type="button">Ouvrir la fenêtre d'alerte (alertdialog)</button></p>
+				<p><button id="Cdialog" class="acsa-dial-button" data-acsa-target="Fenetredialog" type="button">Ouvrir la fenêtre de dialogue (dialog)</button></p>
+				<div id="Fenetrealertdialog" class="acsa-dial" role="alertdialog" aria-labelledby="alertdialogTitre" tabindex="-1">
+					<p id="alertdialogTitre">Demande de confirmation</p>
+					<p>Pour passer à l'étape suivante, vous devez accepter les conditions d'utilisation du service</p>
+					<p style="text-align:center"><button id="confirmalterdialog" type="button">J'accepte les conditions d'utilisation</button></p>
+					<p><button id="closealertdial" class="acsa-close" type="button" title="Fermer"><span aria-hidden="true">X</span></button></p>
+				</div>
+				<div id="Fenetredialog"  class="acsa-dial" role="dialog" aria-labelledby="dialogTitre" aria-describedby="dialogHelp" tabindex="-1" data-acsa-focus="user">
+					<button id="closedial" class="acsa-close" type="button" title="Fermer"><span aria-hidden="true">X</span></button>
+					<p id="dialogTitre">Formulaire de connection</p>
+					<p id="dialogHelp">Rappel : votre nom d'utilisateur et votre mot de passe vous ont été fournis par email.</p>
+					<form method="post" action="#">
+						<label for="user">Utilisateur</label><input type="text" id="user" /><br />
+						<label for="password">Mot de passe</label><input type="password" id="password" /><br />
+						<input type="submit" value="me connecter" />
+					</form>
+					<p style="text-align:center"><a href="#">J'ai perdu mes identifiants</a></p>
+				</div>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+				<h3>Intégration</h3>
+<pre>
+<code class="HTML">
+&lt;p&gt;&lt;button id="Cdialog" class="acsa-dial-button" data-acsa-target="Fenetredialog" type="button"&gt;Ouvrir la fenêtre de dialogue (dialog)&lt;/button&gt;&lt;/p&gt;
+&lt;div id="Fenetredialog"  class="acsa-dial" role="dialog" aria-labelledby="dialogTitre" aria-describedby="dialogHelp" tabindex="-1" data-acsa-focus="user"&gt;
+	&lt;button id="closedial" class="acsa-close" type="button" title="Fermer"&gt;&lt;span aria-hidden="true"&gt;X&lt;/span&gt;&lt;/button&gt;
+	&lt;p id="dialogTitre"&gt;Formulaire de connection&lt;/p&gt;
+	&lt;p id="dialogHelp"&gt;Rappel : votre nom d'utilisateur et votre mot de passe vous ont été fournis par email.&lt;/p&gt;
+	&lt;form method="post" action="#"&gt;
+		&lt;label for="user"&gt;Utilisateur&lt;/label&gt;&lt;input type="text" id="user" /&gt;&lt;br /&gt;
+		&lt;label for="password"&gt;Mot de passe&lt;/label&gt;&lt;input type="password" id="password" /&gt;&lt;br /&gt;
+		&lt;input type="submit" value="me connecter" /&gt;
+	&lt;/form&gt;
+	&lt;p style="text-align:center"&gt;&lt;a href="#"&gt;J'ai perdu mes identifiants&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code>
+<code class="javascript">
+/* Javascript */
+/* 
+Parametres (composant_config.js)
+[ Open button ]
+- required : dialog.button className value
+- required : dialog.targetId data attribute Name (value = targeted dialog id )
+[ Dialog element ]
+- optional : dialog.targetFocus attribute Name (value = first focused element within dialog element)
+	 (By default the close button get by dialog.close className value)
+[ Close Button ]
+- required : dialog.close className value
+*/
+dialog : {
+	//CSS
+	button : 'acsa-dial-button',
+	close : 'acsa-close',
+	//data-
+	targetId : 'data-acsa-target',
+	targetFocus : 'data-acsa-focus'
+	}
+/*
+Initialisation
+- required obj : dialog component (acsa_config.dialog.targetId)
+- required returnTo : element focus result (this)
+*/
+var listDial = document.getElementsByClassName( acsa_config.dialog.button );
+for ( var i = 0, len = listDial.length; i < len; i++ ){
+	listDial[i].addEventListener( 'click', function setListDial(){
+		var obj = document.getElementById( this.getAttribute(acsa_config.dialog.targetId) );
+		var returnTo = this;
+		var dialog = new Dialog ( obj, returnTo );
+	}, false );
+}
+*/
+</code>
+</pre>
+			<footer>
+				<h4>Références</h4>
+				<ul>
+					<li><a href="http://www.w3.org/WAI/PF/aria-practices/#alertdialog" lang="en">WAI-ARIA 1.0 Authoring Practices - Design Pattern - alertdialog</a></li>
+					<li><a href="http://www.w3.org/WAI/PF/aria-practices/#dialog_modal" lang="en">WAI-ARIA 1.0 Authoring Practices - Design Pattern - dialog modal</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Tabpanel -->
+		<section class="a42-component" id="tabpanel" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Tabpanel</span> <span>[<a href="#test3">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#dialog"><img src="images/t1-prev.png" alt="dialog" title="dialog" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#tooltip"><img src="images/t1-next.png" alt="tooltip" title="tooltip" /></a></li>
+					</ul>
+				</div>
+				<p>Système d'onglets destiné à diffuser des contenus sous la forme de panneaux successifs contrôlés par des onglets</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Le composant propose trois panneaux contenant successivement un titre et du contenu textuel, du contenu textuel, du contenu textuel et des liens.
+				</p>
+				<h4>Enrichissements</h4>
+				<ol>
+					<li>Le contenu du panneau 1 utilise une propriété <code>tabindex="0"</code> nécessaire pour donner accès, via la tabulation, au contenu du panneau;</li>
+					<li>Le titre (onglet) du panneau 2 utilise une propriété <code>aria-describedby</code> permettant de vocaliser le contenu automatiquement lorsque le panneau est affiché.</li>
+				</ol>
+				<h3 id="test3" tabindex="-1">Test</h3>
+				<h4>Instructions</h4>
+				<ol>
+				<li>Tabuler jusqu'à obtenir le focus sur l'onglet actif;</li>
+				<li>A partir de l'onglet, tabuler pour atteindre la zone de contenu du panneau;</li>
+				<li>A partir du contenu du panneau, tabuler en arrière pour reprendre le focus sur l'onglet du panneau;</li>
+				<li>A partir d'un onglet, utiliser les flêches de direction pour vous déplacer d'onglet en onglet;</li>
+				<li>Le test de tabulation dans le contenu d'un panneau peut-être réalisé sur le panneau de l'onglet 3.</li>
+				</ol>
+				<div class="acsa-tab-panel">
+					  <ul class="tabhead" role="tablist">
+						<li role="presentation">
+							<div id="tab0" role="tab" aria-selected="true" aria-controls="pan0" class="acsa-tab-head  acsa-tab-head-active" tabindex="0">Panneau 1</div>
+						</li>
+						<li role="presentation">
+							<div id="tab1" role="tab" aria-selected="false" aria-controls="pan1" class=" acsa-tab-head" tabindex="-1" aria-describedby="contenupanneau2">Panneau 2</div>
+						</li>
+						<li role="presentation">
+							<div id="tab2" role="tab" aria-selected="false" aria-controls="pan2" class=" acsa-tab-head" tabindex="-1">Panneau 3</div>
+						</li>
+					</ul>
+					<div id="pan0" role="tabpanel" class=" acsa-tab-pan acsa-tab-pan-active" aria-labelledby="tab0" aria-expanded="true" aria-hidden="false">
+							<h4 id="panT0" tabindex="0">Contenu du panneau 1</h4>
+							<p>
+							Lorsqu'un panneau ne contient que du texte, le contenu n'est pas vocalisé. Une première adaptation consiste à implémenter un <code>tabindex=0</code> sur le contenu ou sur le premier élément du contenu. Cela permet aux utilisateurs de lecteurs d'écran d'accéder au contenu du panneau via la touche <kbd>TAB</kbd>, ce qui déclenchera la vocalisation du contenu. 
+							</p>
+					</div>
+					<div id="pan1"  role="tabpanel" class="acsa-tab-pan" aria-labelledby="tab1" aria-expanded="false" aria-hidden="true">
+						<p id="contenupanneau2">
+						  Lorsque le panneau ne contient qu'un message, destiné à être lu et qui ne nécessite pas de donner accès au panneau de contenu, une propriété <code>aria-describedby="id_contenu"</code> implémentée sur l'élément <code>tab</code> peut être suffisante.
+						</p>
+					</div>
+					<div id="pan2" role="tabpanel" class="acsa-tab-pan" aria-labelledby="tab2" aria-expanded="false" aria-hidden="true">
+						<p id="contenupanneau3">
+						 Lorsque le panneau ne contient que des contenus focusables ou un mélange de contenus focusables et non-focusables, la propriété <code>tabindex="0"</code> sur le contenu du panneau est inutile. La touche <kbd>TAB</kbd> prenant le focus sur le premier élément focusable donnera ensuite aux utilisateurs de lecteurs d'écran la possibilité de naviguer normalement dans le contenu du panneau.
+						</p>
+						<ul>
+							<li><a href="#">Exemple de lien 1</a></li>
+							<li><a href="#">Exemple de lien 2</a></li>
+							<li><a href="#">Exemple de lien 3</a></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+				<h3>Intégration</h3>
+<pre>
+<code class="html">
+&lt;div class="acsa-tab-panel"&gt;
+	&lt;ul class="tabhead" role="tablist"&gt;
+		&lt;li role="presentation"&gt;
+			&lt;div id="tab0" role="tab" aria-selected="true" aria-controls="pan0" class="acsa-tab-head  acsa-tab-head-active" tabindex="0"&gt;Panneau 1&lt;/div&gt;
+		&lt;/li&gt;
+	[...]
+	&lt;/ul&gt;
+	&lt;div id="pan0" role="tabpanel" class=" acsa-tab-pan acsa-tab-pan-active" 	aria-labelledby="tab0" aria-expanded="true" aria-hidden="false"&gt;
+		[.Contenu du panneau]
+	&lt;/div&gt;
+	[...]
+&lt;/div&gt;
+</code>
+<code class="javascript">
+/* Javascript */
+/*
+parametres (composant_config.js)
+[tabpanel element]
+-required : tabPanel.tabPanel main element className value
+[tablist element]
+-required : for each tab in tablist, tabPanel.head className value
+-required : for each tab in tablist, tabPanel.headActive className value for selected tab
+[pan list element]
+-required : for each pan, tabPanel.pan className value
+-required : for each pan, tabPanem.panActive className caluer for selected tab.
+*/
+tabPanel : {
+	//Css
+	tabPanel : 'acsa-tab-panel',
+	head : 'acsa-tab-head',
+	headActive : 'acsa-tab-head-active',
+	pan : 'acsa-tab-pan',
+	panActive : 'acsa-tab-pan-active'
+}
+//Initialisation
+	var listTabPanel = document.getElementsByClassName( acsa_config.tabPanel.tabPanel );;
+	var tabPanel = new Array();
+	for ( var i = 0, len = listTabPanel.length; i < len; i++ ){
+		tabPanel[i] = new TabPanel( listTabPanel[i] );
+	}
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#tabpanel">WAI-ARIA 1.0 Authoring Practices - Design Pattern - tabpanel</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Tooltip -->
+		<section class="a42-component" id="tooltip" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Tooltip</span> <span>[<a href="#test4">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#tabpanel"><img src="images/t1-prev.png" alt="tabpanel" title="tabpanel" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#button"><img src="images/t1-next.png" alt="button" title="button" /></a></li>
+					</ul>
+				</div>
+				<p>Une infobulle</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Dans un formulaire, un champ de saisie affiche une infobulle à la prise de focus.</p>
+				<h3 id="test4" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+				<li>Tabulez jusqu'au champ "mot de passe".</li>
+				</ol>
+					<form method="post" action="#" id="tooltipform">
+						<h4>Formulaire de connection</h4>
+						<label for="user2">Utilisateur</label><input type="text" id="user2" /><br />
+						<label for="password2">Mot de passe</label><input aria-describedby="infobulle" type="password" id="password2" class="acsa-tooltip" /><br />
+						<p id="infobulle" role="tooltip">Votre mot de passe doit contenir 8 caractères au moins.</p>
+						<input type="submit" value="me connecter" />
+					</form>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+				<h4>Intégration</h4>
+<pre>
+	<code class="html">
+&lt;label for="password2"&gt;Mot de passe&lt;/label&gt;&lt;input aria-describedby="infobulle" 
+type="password" id="password2" class="acsa-tooltip" /&gt;&lt;br /&gt;
+&lt;p id="infobulle" role="tooltip"&gt;Votre mot de passe doit contenir 8 caractères au moins.&lt;/p&gt;		
+	</code>
+	<code class="Javascript">
+/* Javascript */
+/* 
+Parametres (composant_config.js)
+- required : toolTip.tooltip className value for the element wich called the tooltip referenced by aria-describedby
+*/
+tooltip : {
+	//CSS
+	tooltip : 'acsa-tooltip'
+},
+//Initialisation
+	var listTooltip = document.getElementsByClassName( acsa_config.tooltip.tooltip );
+	var tooltip = new Array();
+	for ( var i = 0, len = listTooltip.length; i < len; i++ ){
+		tooltip[i] = new Tooltip( listTooltip[i] );
+	}
+	</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#tooltip">WAI-ARIA 1.0 Authoring Practices - Design Pattern - tooltip</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Button -->
+		<section class="a42-component" id="button" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Button</span> <span>[<a href="#test5">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#tooltip"><img src="images/t1-prev.png" alt="tooltip" title="tooltip" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><img src="images/t1-next_gray.png" alt="" /></li>
+					</ul>
+				</div>
+				<p>Un bouton d'action</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Un bouton d'action, équivalent à l'élément HTML <code>button</code> sous différentes formes</p>
+				<h3 id="test5" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler sur les trois boutons suivants;</li>
+					<li>Le premier bouton est actif;</li>
+					<li>Le second bouton est désactivé;</li>
+					<li>Le troisième bouton est actif et labellisé via un passage de texte;</li>
+					<li>Les deux boutons actifs affichent un  message javascript.</li>
+				</ol>
+				<div id="Zbutton">
+				<p>
+				<span role="button" class="acsa-button" aria-disabled="false" onclick="alert(' bouton 1 - votre message est confirmé')" tabindex="0">Confirmer votre message - 1</span>
+				</p>
+				<p>
+				<span role="button" class="acsa-button" tabindex="0" aria-disabled="true">Confirmer votre message - 2</span>
+				</p>
+				<p>
+				<span id="LabelB">Confirmer votre message - 3</span> <span  class="acsa-button" onclick="alert('Bouton 3 - votre message est confirmé') " role="button" aria-labelledby="LabelB" tabindex="0">OK</span>
+				</p>
+				</div>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+				<h4>Intégration</h4>
+<pre>
+	<code class="html">
+&lt;span role="button" class="acsa-button" aria-disabled="false" tabindex="0"&gt;Confirmer votre message - 1&lt;/span&gt;		
+	</code>
+	<code class="Javascript">
+/* Javascript */
+/* 
+Parametres (composant_config.js)
+- required : button.button className value
+*/
+button : {
+	//CSS
+	button : 'acsa-button'
+}
+//Initialisation
+var listButton = document.getElementsByClassName( acsa_config.button.button );
+	for ( var i = 0, len = listButton.length; i < len; i++ ){
+		listButton[i].addEventListener( 'keydown', function setListButton( event ){
+			var key = event.keyCode;
+			button = new Button ( this, key );
+		}, false );
+	}
+	</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#button">WAI-ARIA 1.0 Authoring Practices - Design Pattern - button</a></li>
+				</ul>
+			</footer>
+		</section>
+	</main>	
+	<footer role="contentinfo">
+		<p>
+			Ce document est un document de l'État placé sous <a href="http://wiki.data.gouv.fr/wiki/Licence_Ouverte_/_Open_Licence">licence ouverte 1.0</a> ou ultérieure, comme tous les documents hébergés sur <a href="http://references.modernisation.gouv.fr">references.modernisation.gouv.fr</a>. Voir les conditions d'utilisation de la licence dans les <a href="http://references.modernisation.gouv.fr/mentions-legales">mentions légales.</a>
+		</p>
+	</footer>
+	</div>
+</div>
+<script>AccessContent()</script>
+</body>
+</html>
