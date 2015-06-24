@@ -95,7 +95,12 @@ var ComposantAria = ( function setComposantAria(){
 		this.unit = '';
 		this.step = this.objWidth / Number( obj.getAttribute( 'aria-valuemax' ) );
 		//Init aria-valuenow
-		if (!obj.getAttribute('aria-valuenow')) obj.setAttribute( 'aria-valuenow', obj.getAttribute( 'aria-valuemin' ) ); 
+		if (obj.getAttribute('aria-valuenow') == null || isNaN(parseInt(obj.getAttribute('aria-valuenow'))))
+			obj.setAttribute( 'aria-valuenow',"0");
+		if (parseInt(obj.getAttribute('aria-valuenow'))<parseInt(obj.getAttribute( 'aria-valuemin' )))
+			obj.setAttribute( 'aria-valuenow', obj.getAttribute( 'aria-valuemin' ) ); 
+		if (parseInt(obj.getAttribute('aria-valuenow'))>parseInt(obj.getAttribute( 'aria-valuemax' )))
+			obj.setAttribute( 'aria-valuenow', obj.getAttribute( 'aria-valuemax' ) ); 
 		//define object keycodes
 		this.keys = new keyCodes();
 	}
