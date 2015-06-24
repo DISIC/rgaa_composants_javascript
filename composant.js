@@ -109,24 +109,29 @@ var ComposantAria = ( function setComposantAria(){
 			var posCurrent;
 			obj.style.left ? posCurrent	= parseFloat( obj.style.left ) : posCurrent = posOrigin;
 			var valCurrent = parseInt( obj.getAttribute( 'aria-valuenow' ) );
+			var handled = false;
 			if( ( event.keyCode === keys.up || event.keyCode === keys.right ) && valCurrent < Number( obj.getAttribute( 'aria-valuemax' ) ) ){
 				posCurrent += step;
 				valCurrent += 1;
+				handled = true;
 			}
 			if( ( event.keyCode === keys.down || event.keyCode === keys.left ) && valCurrent > Number( obj.getAttribute( 'aria-valuemin' ) ) ){
 				posCurrent -= step;
 				valCurrent -= 1;
+				handled = true;
 			}
 			if( event.keyCode === keys.home ) {
 				posCurrent = posOrigin;
 				valCurrent = Number( obj.getAttribute( 'aria-valuemin' ) );
+				handled = true;
 			}
 			if( event.keyCode === keys.end ) {
 				posCurrent = posMax;
 				valCurrent = Number( obj.getAttribute( 'aria-valuemax' ) );
+				handled = true;
 			}
 			maj (this , posCurrent , valCurrent, unit);
-			event.preventDefault();
+			if (handled) event.preventDefault();
 		}, false );
 		function maj ( obj, posCurrent, valCurrent, unit ) {
 			var txt = document.getElementById('sliderCurrent').firstChild;
