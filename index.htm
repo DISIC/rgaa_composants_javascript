@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html lang="fr">
 <head>
-<title>Composant de référence ARIA</title>
+<title>Bibliothèque de référence - Composant ARIA</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" id="Cstyle" href="style.css" type="text/css" media="screen" title="style par defaut" />
 <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" type="text/css" media="screen" />
@@ -18,7 +18,7 @@
 		<li><a href="#Mcontent">Contenu</a></li>
 	</ul>
 	<header role="banner" class="Cboth">
-		<h1 class="Cboth"><img src="images/bloc-sgmap-2.jpg" alt="République Française - Premier Ministre - Secrétariat Général pour la Modernisation de l'Action Publique" /> <span>Ressource RGAA <br />Implémentation des composants ARIA</span></h1>
+		<h1 class="Cboth"><img src="images/bloc-sgmap-2.jpg" alt="République Française - Premier Ministre - Secrétariat Général pour la Modernisation de l'Action Publique" /> <span>Ressource RGAA <br />Bibliothèque de référence - Implémentation des composants ARIA</span></h1>
 	</header>
 	<!--navigation -->
 	<nav role="navigation" class="Cboth" aria-label="menu de navigation">
@@ -31,6 +31,12 @@
 			<li><a href="#tabpanel"><span class="bullet"><span class="Sbullet"></span></span>tabpanel</a></li>
 			<li><a href="#tooltip"><span class="bullet"><span class="Sbullet"></span></span>tooltip</a></li>
 			<li><a href="#button"><span class="bullet"><span class="Sbullet"></span></span>button</a></li>
+			<li><a href="#coche"><span class="bullet"><span class="Sbullet"></span></span>checkbox</a></li>
+			<li><a href="#menubar"><span class="bullet"><span class="Sbullet"></span></span>menubar</a></li>
+			<li><a href="#accordion"><span class="bullet"><span class="Sbullet"></span></span>accordion</a></li>
+			<li><a href="#tree"><span class="bullet"><span class="Sbullet"></span></span>tree</a></li>
+			<li><a href="#datepicker"><span class="bullet"><span class="Sbullet"></span></span>date picker</a></li>
+			<li><a href="#autocomplete"><span class="bullet"><span class="Sbullet"></span></span>autocomplete</a></li>
 		</ul>
 	</nav>
 	<div id="Mcontent" tabindex="-1">
@@ -46,21 +52,21 @@
 					</ul>
 				</div>
 			</header>
-				<p>Cette plateforme de test présente les implémentations des composants ARIA telles qu'elles sont définies par les motifs de conception.</p>
-				<p>Elle a permis d'établir les restitutions par défaut obtenues avec les technologies d'assistance définies par la base de référence.</p>
-				<p><strong>Note 1: </strong> certains enrichissements, nécessaires à une restitution correcte, sont décrits pour chaque composant. Ces enrichissements ne sont pas demandés par les motifs de conception ARIA car ils sont contextuels à la nature et l'utilisation du composant ou de ses contenus.</p>
-				<p><strong>Note 2: </strong> les interactions au clavier sont limitées à celles requises par le référentiel.</p>
+				<p>Cette bibliothèque présente les implémentations des composants ARIA telles qu'ils sont définis par les motifs de conception.</p>
+				<p>Elle permet d'établir les restitutions par défaut obtenues avec les technologies d'assistance définies par la base de référence.</p>
+				<p>Cette bibliothèque est destinée à servir de référence pour les tests de restitution demandés par le test 7.6 du critère 7.1 du référentiel RGAA. Elle n'est pas destinée à être utilisée en production.</p>
+				<p><strong>Note 1&nbsp;: </strong> certains enrichissements, nécessaires à une restitution correcte, sont décrits pour chaque composant. Ces enrichissements ne sont pas demandés par les motifs de conception ARIA car ils sont contextuels à la nature et l'utilisation du composant ou de ses contenus.</p>
+				<p><strong>Note 2&nbsp;: </strong> les interactions au clavier sont limitées à celles requises par le référentiel.</p>
 				<article role="article">
 					<h3>Aide</h3>
-					<p>Les sections de test sont toujours présentées de la même manière :</p>
+					<p>Les sections de test sont toujours présentées de la même manière&nbsp;:</p>
 					<ol>
-						<li>(Titre 2) : Le nom du rôle correspondant au composant et une ancre d'accès direct à la zone de test.</li>
-						<li>une liste de navigation (composant précédent, accès au menu, composant suivant).</li>
-						<li>une brève description du composant.</li>
-						<li>(Titre 3) : Implémentation : description succinte de l'implémentation et enrichissements éventuels.</li>
-						<li>(Titre 3) : Test : la zone de test et les instructions de test.</li>
-						<li>(Titre 3 ou 4): description de l'implémentation HTML et JavaScript.</li></li>
-						<li>(Titre 3) : Référence : un lien vers la référence utilisée pour l'implémentation.</li>
+						<li>(Titre 2)&nbsp;: le nom du rôle correspondant au composant et une ancre d'accès direct à la zone de test&nbsp;;</li>
+						<li>une liste de navigation (composant précédent, accès au menu, composant suivant)&nbsp;;</li>
+						<li>une brève description du composant&nbsp;;</li>
+						<li>(Titre 3)&nbsp;: implémentation&nbsp;: description succinte de l'implémentation et enrichissements éventuels&nbsp;;</li>
+						<li>(Titre 3)&nbsp;: test&nbsp;: la zone de test et les instructions de test&nbsp;;</li>
+						<li>(Titre 3)&nbsp;: référence&nbsp;: un lien vers la référence utilisée pour l'implémentation.</li>
 					</ol>
 				</article>
 			<footer>
@@ -76,7 +82,7 @@
 				<div>
 					<h2 class="CTitre"><span lang="en">Slider</span> <span>[<a href="#test0">Aller au test</a>]</span></h2>
 					<ul>
-						<li><a class="a42-inboard" href="#presentation"><img src="images/t1-prev.png" alt="Presentation" title="Presentation" /></a></li>
+						<li><a class="a42-inboard" href="#presentation"><img src="images/t1-prev.png" alt="Présentation" title="Présentation" /></a></li>
 						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" title="menu" /></a></li>
 						<li><a lang="en" class="a42-inboard" href="#progressbar"><img src="images/t1-next.png" alt="Progressbar" title="Progressbar"/></a></li>
 					</ul>
@@ -90,8 +96,8 @@
 				<h4>Instruction</h4>
 				<ol>
 					<li>Tabuler pour prendre le focus sur le curseur du potentiomètre</li>
-					<li>Augmenter la valeur avec les flêches <kbd>haut</kbd> et <kbd>droite</kbd></li>
-					<li>Diminuer la valeur avec les flêches <kbd>bas</kbd> et <kbd>gauche</kbd></li>
+					<li>Augmenter la valeur avec les flèches <kbd>haut</kbd> et <kbd>droite</kbd></li>
+					<li>Diminuer la valeur avec les flèches <kbd>bas</kbd> et <kbd>gauche</kbd></li>
 				</ol>
 				<div id="Zslider">
 					<p id="sliderTitre">Choisir le tarif maximum recherché</p>
@@ -105,9 +111,9 @@
 			<table class="acsa-table-result">
 				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
 				<tr>
-					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
-					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
-					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
 				</tr>
 				<tr>
 					<td>OK</td>
@@ -115,42 +121,28 @@
 					<td>OK</td>
 				</tr>
 			</table>
-				<h3>Intégration</h3>
-				<pre>
-<code class="html">
-/* HTML */
-	&lt;p id="sliderTitre"&gt;Choisir le tarif maximum recherché&lt;/p&gt;
-	&lt;p id="sliderCurrent"&gt;&lt;span&gt;10 €&lt;/span&gt;&lt;/p&gt;
-	&lt;span id="sliderLine"&gt;&lt;/span&gt;
-	&lt;span class="acsa-cursor-button" id="sliderCursor" role="slider" aria-valuemin="10" aria-valuemax="198" 
-	aria-valuenow="0" aria-valuetext="0 €" tabindex="0" aria-labelledby="sliderTitre" data-acsa-unit="€" &gt;&lt;span class="sliderhover"&gt;&lt;/span&gt;&lt;/span&gt;
-</code>
-<code class="javascript">
-/*  Javascript */
-//Paramètres (composant_config.js)
-slider : {
-	//CSS
-	cursor : 'acsa-cursor-button',
-	//data-
-	unit : 'data-acsa-unit'
-}
-/* Initialisation
-- required obj : slider component (this)
-- required keys : key event
-- required posOrigin : initial x offsetleft
-- required posMax : final right x position
-- required unit : value for aria-valuetext
-- required step : relative step unit
-*/
-var listSlider = document.getElementsByClassName( acsa_config.slider.cursor );
-for ( var i = 0, len = listSlider.length;	i < len; i++ ){
-	listSlider[i].addEventListener( 'focus', function setListSlider(){
-		var slider = new Slider ( this );
-		slider.set( this, slider.keys, slider.posOrigin, slider.posMax, slider.unit, slider.step );
-	}, false );
-}
-</code>
-</pre>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Slider</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA annonce «&nbsp;Document choisir le tarif maximum recherché, potentiomètre 0 euros&nbsp;» et passe en mode application («&nbsp;Bip&nbsp;»
+ ou «&nbsp;Mode formulaire&nbsp;»).</td>
+					<td>Jaws annonce «&nbsp;Potentiomètre horizontal, choisir le tarif maximum recherché, 0 euros +[message d'aide]&nbsp;»</td>
+					<td>VoiceOver annonce «&nbsp;0 euros, choisir le tarif maximum recherché curseur&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Augmenter ou diminuer la valeur</th>
+					<td>NVDA annonce chaque changement de valeur.</td>
+					<td>Jaws annonce chaque changement de valeur</td>
+					<td>VoiceOver annonce chaque changement de valeur.</td>
+				</tr>
+			</table>
 			<footer>
 				<h4>Références</h4>
 				<ul>
@@ -164,7 +156,7 @@ for ( var i = 0, len = listSlider.length;	i < len; i++ ){
 				<div>
 					<h2 class="CTitre"><span lang="en">Progressbar</span> <span>[<a href="#test1">Aller au test</a>]</span></h2>
 					<ul>
-						<li><a lang="en" class="a42-inboard" href="#presentation"><img src="images/t1-prev.png" alt="presentation" title="presentation" /></a></li>
+						<li><a class="a42-inboard" href="#presentation"><img src="images/t1-prev.png" alt="Présentation" title="Présentation" /></a></li>
 						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
 						<li><a lang="en" class="a42-inboard" href="#dialog"><img src="images/t1-next.png" alt="dialog" title="dialog" /></a></li>
 					</ul>
@@ -174,16 +166,16 @@ for ( var i = 0, len = listSlider.length;	i < len; i++ ){
 			<article role="article">
 				<h3>Implémentation</h3>
 				<p>
-					Un bouton permet de mettre à jour une zone d'actualités. Durant le temps nécessaire à la mise à jour une barre de progression est affichée et décompte la mise à jour.
+					Un bouton permet de mettre à jour une zone d'actualités. Durant le temps nécessaire à la mise à jour, une barre de progression est affichée et décompte la mise à jour.
 				</p>
 				<h4>Enrichissement</h4>
 				<ol>
-					<li>A la fin de la mise à jour, le focus est donné sur la zone qui vient d'être mise à jour.</li>
+					<li>À la fin de la mise à jour, le focus est donné sur la zone qui vient d'être mise à jour.</li>
 				</ol>
 				<h3 id="test1" tabindex="-1">Test</h3>
 				<h4>Instructions</h4>
 				<ol>
-					<li>Cliquez sur le bouton ci-dessous pour lancer la mise à jour</li>
+					<li>Cliquer sur le bouton ci-dessous pour lancer la mise à jour</li>
 				</ol>
 				<p><button id="Cprogressbar" type="button">Mettre à jour les actualités</button></p>
 				<div class="progressbar">
@@ -200,11 +192,11 @@ for ( var i = 0, len = listSlider.length;	i < len; i++ ){
 				</div>
 			</article>
 			<table class="acsa-table-result">
-				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<caption> <span lang="en">Progressbar</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
 				<tr>
-					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
-					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
-					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
 				</tr>
 				<tr>
 					<td>OK</td>
@@ -212,40 +204,33 @@ for ( var i = 0, len = listSlider.length;	i < len; i++ ){
 					<td>OK</td>
 				</tr>
 			</table>
-				<h3>Intégration</h3>
-<pre>
-<code class="html">
-/* HTML */
-&lt;article role="article" id="Zmaj" aria-describedby="Pgbr"&gt;
-	&lt;h4 id="actuTitre" tabindex="-1"&gt;Actualités&lt;/h4&gt;
-	&lt;p id="actuprogression"&gt; [conten updated]&lt;/p&gt;
-&lt;/article&gt;
-&lt;div id="Pgbr" tabindex="-1" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" aria-labelledby="actuTitre"&gt;
-	&lt;p&gt;En cours de mise à jour&lt;/p&gt;
-	&lt;div class="progression acsa-progress-indicator"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code>
-<code class="javascript">
-/* Javascript */
-//Paramètres (composant_config.js)
-progressBar : {
-	//CSS
-	indicator : 'acsa-progress-indicator'
-}
-/*
-Initialisation
-- required obj : the progressbar component
-- optionnal returnTo : element focus result
-- optionnal contenerMaj : target element for aria-busy value
-*/
-document.getElementById('Cprogressbar').addEventListener ( 'click', function setprogressbar(){
-	var contenerMaj = document.getElementById( 'Zmaj' );
-	var obj = document.getElementById( 'Pgbr' );
-	var returnTo = document.getElementById( 'actuTitre' );
-	var progressBar = new Progressbar( obj, returnTo, contenerMaj );
-}, false );
-</code>
-</pre>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">progressbar</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA annonce «&nbsp;bouton mettre à jour les actualités&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;bouton mettre à jour les actualités&nbsp;»</td>
+					<td>VoiceOver indique «&nbsp;mettre à jour les actualités&nbsp;» bouton.</td>
+				</tr>
+				<tr>
+					<th scope="row">Progression en cours.</th>
+					<td>NVDA annonce la progression en % ou via un signal sonore en fonction des paramètres utilisateurs.</td>
+					<td>Jaws annonce «&nbsp;barre de progression&nbsp;» et la progression en pourcentage.</td>
+					<td>VoiceOver annonce la progression sous la forme d'un signal sonore.</td>
+				</tr>
+				<tr>
+					<th scope="row">Fin de la mise à jour.</th>
+					<td>NVDA annonce le titre de la zone mise à jour.</td>
+					<td>Jaws annonce le titre de la zone mise à jour.</td>
+					<td>VoiceOver annonce le titre de la zone mise à jour.</td>
+				</tr>
+			</table>
 			<footer>
 				<h3>Références</h3>
 				<ul>
@@ -269,7 +254,7 @@ document.getElementById('Cprogressbar').addEventListener ( 'click', function set
 			<article role="article">
 				<h3>Implémentation</h3>
 				<p>Le premier composant est une fenêtre d'alerte modale qui demande une confirmation.</p>
-				<p>Le seconde composant est une fenêtre de dialogue modale utilisée pour une procédure de connection.</p>
+				<p>Le second composant est une fenêtre de dialogue modale utilisée pour une procédure de connexion.</p>
 				<h4>Enrichissements</h4>
 				<ol>
 				<li>La fenêtre de dialogue modale utilise une propriété <code>aria-describedby</code> pour vocaliser un contenu d'aide à l'ouverture de la fenêtre</li>
@@ -278,19 +263,19 @@ document.getElementById('Cprogressbar').addEventListener ( 'click', function set
 				<h4>Instructions</h4>
 				<ol>
 				<li>Utiliser les deux boutons ci-dessous pour ouvrir les deux types de fenêtres</li>
-				<li>Attention : les boutons de confirmation, les liens et les champs de formulaire proposés dans le contenu ne sont pas fonctionnels.</li>
+				<li>Attention&nbsp;: les boutons de confirmation, les liens et les champs de formulaire proposés dans le contenu ne sont pas fonctionnels.</li>
 				</ol>
 				<p><button id="Calertdialog" class="acsa-dial-button" data-acsa-target="Fenetrealertdialog" type="button">Ouvrir la fenêtre d'alerte (alertdialog)</button></p>
 				<p><button id="Cdialog" class="acsa-dial-button" data-acsa-target="Fenetredialog" type="button">Ouvrir la fenêtre de dialogue (dialog)</button></p>
 				<div id="Fenetrealertdialog" class="acsa-dial" role="alertdialog" aria-labelledby="alertdialogTitre" tabindex="-1">
-					<p id="alertdialogTitre">Demande de confirmation</p>
-					<p>Pour passer à l'étape suivante, vous devez accepter les conditions d'utilisation du service</p>
-					<p style="text-align:center"><button id="confirmalterdialog" type="button">J'accepte les conditions d'utilisation</button></p>
-					<p><button id="closealertdial" class="acsa-close" type="button" title="Fermer"><span aria-hidden="true">X</span></button></p>
+					<p id="alertdialogTitre">Confirmation</p>
+					<p>Votre demande à bien été prise en compte.</p>
+					<p style="text-align:center"><button class="acsa-close" type="button" title="Fermer">OK</button></p>
+					<p>
 				</div>
 				<div id="Fenetredialog"  class="acsa-dial" role="dialog" aria-labelledby="dialogTitre" aria-describedby="dialogHelp" tabindex="-1" data-acsa-focus="user">
 					<button id="closedial" class="acsa-close" type="button" title="Fermer"><span aria-hidden="true">X</span></button>
-					<p id="dialogTitre">Formulaire de connection</p>
+					<p id="dialogTitre">Formulaire de connexion</p>
 					<p id="dialogHelp">Rappel : votre nom d'utilisateur et votre mot de passe vous ont été fournis par email.</p>
 					<form method="post" action="#">
 						<label for="user">Utilisateur</label><input type="text" id="user" /><br />
@@ -301,11 +286,11 @@ document.getElementById('Cprogressbar').addEventListener ( 'click', function set
 				</div>
 			</article>
 			<table class="acsa-table-result">
-				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<caption> <span lang="en">Dialog</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
 				<tr>
-					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
-					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
-					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
 				</tr>
 				<tr>
 					<td>OK</td>
@@ -313,59 +298,34 @@ document.getElementById('Cprogressbar').addEventListener ( 'click', function set
 					<td>OK</td>
 				</tr>
 			</table>
-				<h3>Intégration</h3>
-<pre>
-<code class="HTML">
-&lt;p&gt;&lt;button id="Cdialog" class="acsa-dial-button" data-acsa-target="Fenetredialog" type="button"&gt;Ouvrir la fenêtre de dialogue (dialog)&lt;/button&gt;&lt;/p&gt;
-&lt;div id="Fenetredialog"  class="acsa-dial" role="dialog" aria-labelledby="dialogTitre" aria-describedby="dialogHelp" tabindex="-1" data-acsa-focus="user"&gt;
-	&lt;button id="closedial" class="acsa-close" type="button" title="Fermer"&gt;&lt;span aria-hidden="true"&gt;X&lt;/span&gt;&lt;/button&gt;
-	&lt;p id="dialogTitre"&gt;Formulaire de connection&lt;/p&gt;
-	&lt;p id="dialogHelp"&gt;Rappel : votre nom d'utilisateur et votre mot de passe vous ont été fournis par email.&lt;/p&gt;
-	&lt;form method="post" action="#"&gt;
-		&lt;label for="user"&gt;Utilisateur&lt;/label&gt;&lt;input type="text" id="user" /&gt;&lt;br /&gt;
-		&lt;label for="password"&gt;Mot de passe&lt;/label&gt;&lt;input type="password" id="password" /&gt;&lt;br /&gt;
-		&lt;input type="submit" value="me connecter" /&gt;
-	&lt;/form&gt;
-	&lt;p style="text-align:center"&gt;&lt;a href="#"&gt;J'ai perdu mes identifiants&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-</code>
-<code class="javascript">
-/* Javascript */
-/* 
-Parametres (composant_config.js)
-[ Open button ]
-- required : dialog.button className value
-- required : dialog.targetId data attribute Name (value = targeted dialog id )
-[ Dialog element ]
-- optional : dialog.targetFocus attribute Name (value = first focused element within dialog element)
-	 (By default the close button get by dialog.close className value)
-[ Close Button ]
-- required : dialog.close className value
-*/
-dialog : {
-	//CSS
-	button : 'acsa-dial-button',
-	close : 'acsa-close',
-	//data-
-	targetId : 'data-acsa-target',
-	targetFocus : 'data-acsa-focus'
-	}
-/*
-Initialisation
-- required obj : dialog component (acsa_config.dialog.targetId)
-- required returnTo : element focus result (this)
-*/
-var listDial = document.getElementsByClassName( acsa_config.dialog.button );
-for ( var i = 0, len = listDial.length; i < len; i++ ){
-	listDial[i].addEventListener( 'click', function setListDial(){
-		var obj = document.getElementById( this.getAttribute(acsa_config.dialog.targetId) );
-		var returnTo = this;
-		var dialog = new Dialog ( obj, returnTo );
-	}, false );
-}
-*/
-</code>
-</pre>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">dialog</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA annonce «&nbsp;formulaire de connexion, dialogue&nbsp;», le focus est donné sur le champ de saisie «&nbsp;utilisateur&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;formulaire de connexion, boîte de dialogue&nbsp;», le focus est donné sur le champ de saisie «&nbsp;utilisateur&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;formulaire de connexion, dialogue&nbsp;», le focus est donné sur le champ de saisie «&nbsp;utilisateur&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Tabulation dans les éléments de la fenêtre.</th>
+					<td>Les éléments sont tabulables.</td>
+					<td>Les éléments sont tabulables.</td>
+					<td>Les éléments sont tabulables.</td>
+				</tr>
+				<tr>
+					<th scope="row">Fermeture de la fenêtre (ESC ou bouton fermer).</th>
+					<td>NVDA annonce «&nbsp;bouton ouvrir la fenêtre de dialogue, dialog&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;bouton ouvrir la fenêtre de dialogue, dialog&nbsp;» </td>
+					<td>VoiceOver annonce «&nbsp;ouvrir la fenêtre de dialogue, dialog, bouton&nbsp;».</td>
+				</tr>
+			</table>
+			<p> Note&nbsp;: un enrichissement, via la propriété <code>aria-describedby</code> est implémenté pour vocaliser le message d'aide à l'ouverture de la fenêtre. Le message d'aide est correctement vocalisé par <span lang="en">JAWS</span> et NVDA mais ne semble pas vocalisé par <span lang="en">VoiceOver</span></p>
 			<footer>
 				<h4>Références</h4>
 				<ul>
@@ -393,17 +353,17 @@ for ( var i = 0, len = listDial.length; i < len; i++ ){
 				</p>
 				<h4>Enrichissements</h4>
 				<ol>
-					<li>Le contenu du panneau 1 utilise une propriété <code>tabindex="0"</code> nécessaire pour donner accès, via la tabulation, au contenu du panneau;</li>
+					<li>Le contenu du panneau 1 utilise une propriété <code>tabindex="0"</code> nécessaire pour donner accès, via la tabulation, au contenu du panneau.</li>
 					<li>Le titre (onglet) du panneau 2 utilise une propriété <code>aria-describedby</code> permettant de vocaliser le contenu automatiquement lorsque le panneau est affiché.</li>
 				</ol>
 				<h3 id="test3" tabindex="-1">Test</h3>
 				<h4>Instructions</h4>
 				<ol>
-				<li>Tabuler jusqu'à obtenir le focus sur l'onglet actif;</li>
-				<li>A partir de l'onglet, tabuler pour atteindre la zone de contenu du panneau;</li>
-				<li>A partir du contenu du panneau, tabuler en arrière pour reprendre le focus sur l'onglet du panneau;</li>
-				<li>A partir d'un onglet, utiliser les flêches de direction pour vous déplacer d'onglet en onglet;</li>
-				<li>Le test de tabulation dans le contenu d'un panneau peut-être réalisé sur le panneau de l'onglet 3.</li>
+				<li>Tabuler jusqu'à obtenir le focus sur l'onglet actif.</li>
+				<li>À partir de l'onglet, tabuler pour atteindre la zone de contenu du panneau.</li>
+				<li>À partir du contenu du panneau, tabuler en arrière pour reprendre le focus sur l'onglet du panneau.</li>
+				<li>À partir d'un onglet, utiliser les flèches de direction pour vous déplacer d'onglet en onglet.</li>
+				<li>Le test de tabulation dans le contenu d'un panneau peut être réalisé sur le panneau de l'onglet 3.</li>
 				</ol>
 				<div class="acsa-tab-panel">
 					  <ul class="tabhead" role="tablist">
@@ -441,11 +401,11 @@ for ( var i = 0, len = listDial.length; i < len; i++ ){
 				</div>
 			</article>
 			<table class="acsa-table-result">
-				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<caption> <span lang="en">Tabpanel</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
 				<tr>
-					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
-					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
-					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
 				</tr>
 				<tr>
 					<td>OK</td>
@@ -453,51 +413,51 @@ for ( var i = 0, len = listDial.length; i < len; i++ ){
 					<td>OK</td>
 				</tr>
 			</table>
-				<h3>Intégration</h3>
-<pre>
-<code class="html">
-&lt;div class="acsa-tab-panel"&gt;
-	&lt;ul class="tabhead" role="tablist"&gt;
-		&lt;li role="presentation"&gt;
-			&lt;div id="tab0" role="tab" aria-selected="true" aria-controls="pan0" class="acsa-tab-head  acsa-tab-head-active" tabindex="0"&gt;Panneau 1&lt;/div&gt;
-		&lt;/li&gt;
-	[...]
-	&lt;/ul&gt;
-	&lt;div id="pan0" role="tabpanel" class=" acsa-tab-pan acsa-tab-pan-active" 	aria-labelledby="tab0" aria-expanded="true" aria-hidden="false"&gt;
-		[.Contenu du panneau]
-	&lt;/div&gt;
-	[...]
-&lt;/div&gt;
-</code>
-<code class="javascript">
-/* Javascript */
-/*
-parametres (composant_config.js)
-[tabpanel element]
--required : tabPanel.tabPanel main element className value
-[tablist element]
--required : for each tab in tablist, tabPanel.head className value
--required : for each tab in tablist, tabPanel.headActive className value for selected tab
-[pan list element]
--required : for each pan, tabPanel.pan className value
--required : for each pan, tabPanem.panActive className caluer for selected tab.
-*/
-tabPanel : {
-	//Css
-	tabPanel : 'acsa-tab-panel',
-	head : 'acsa-tab-head',
-	headActive : 'acsa-tab-head-active',
-	pan : 'acsa-tab-pan',
-	panActive : 'acsa-tab-pan-active'
-}
-//Initialisation
-	var listTabPanel = document.getElementsByClassName( acsa_config.tabPanel.tabPanel );;
-	var tabPanel = new Array();
-	for ( var i = 0, len = listTabPanel.length; i < len; i++ ){
-		tabPanel[i] = new TabPanel( listTabPanel[i] );
-	}
-</code>
-</pre>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">tabpanel</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA active le mode formulaire et annonce «&nbsp;onglet, panneau 1 onglet sélectionné 1 sur 3&nbsp;», et active le mode application (signal sonore).
+					<td>Jaws active le mode formulaire et annonce «&nbsp;onglet, panneau 1&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;panneau 1, sélectionné tabulation 1 sur 3&nbsp;». (Tabulation est une mauvaise traduction de tab pour onglet).</td>
+				</tr>
+				<tr>
+					<th scope="row">Déplacement entre les différents onglets.</th>
+					<td>NVDA annonce «&nbsp;Panneau [x], onglet sélectionné [x] sur [total]&nbsp;»</td>
+					<td>Jaws annonce «&nbsp;onglet panneau 2&nbsp;»</td>
+					<td>VoiceOver annonce «&nbsp;Panneau [x], tabulation [x] sur [total]&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Activation du contenu d'un panneau.</th>
+					<td>NVDA annonce «&nbsp;Panneau [x], fenêtre développée&nbsp;», le contenu du panneau est lu, l'élément ayant pris le focus est lu.</td>
+					<td>Jaws annonce «&nbsp;Panneau [x]&nbsp;», le contenu est lu avec flèche bas.</td>
+					<td>VoiceOver avec la tabulation annonce l'élément ayant le focus. Avec les touches de déplacement, lorsque le focus est donné sur le panneau, VoiceOver annonce «&nbsp;Panneau [x] avec [x] éléments, tableau d'onglet&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Lecture du contenu d'un panneau à la sélection de l'onglet (panneau 2).</th>
+					<td>NVDA&nbsp;: le contenu est lu.</td>
+					<td>Jaws&nbsp;: le contenu est lu.</td>
+					<td>VoiceOver&nbsp;: le contenu est lu	.</td>
+				</tr>
+				<tr>
+					<th scope="row">Depuis le contenu d'un panneau, retour avec la tabulation sur l'onglet corrspondant.</th>
+					<td>NVDA annonce «&nbsp;Panneau [x], onglet sélectionné [x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;onglet panneau [x]&nbsp;»</td>
+					<td>VoiceOver annonce  «&nbsp;Panneau [x], tabulation [x] sur [total]&nbsp;»</td>
+				</tr>
+				<tr>
+					<th scope="row">Sortir du système d'onglets avec la tabulation.</th>
+					<td>NVDA émet un signal sonore indiquant qu'il quitte le mode application.</td>
+					<td>Jaws émet un signal sonore indiquant qu'il quitte le mode application.</td>
+					<td>VoiceOver n'annonce pas la sortie du système d'onglets.</td>
+				</tr>
+			</table>
 			<footer>
 				<h3>Références</h3>
 				<ul>
@@ -524,10 +484,10 @@ tabPanel : {
 				<h3 id="test4" tabindex="-1">Test</h3>
 				<h4>Instruction</h4>
 				<ol>
-				<li>Tabulez jusqu'au champ "mot de passe".</li>
+				<li>Tabuler jusqu'au champ «&nbsp;mot de passe&nbsp;».</li>
 				</ol>
 					<form method="post" action="#" id="tooltipform">
-						<h4>Formulaire de connection</h4>
+						<h4>Formulaire de connexion</h4>
 						<label for="user2">Utilisateur</label><input type="text" id="user2" /><br />
 						<label for="password2">Mot de passe</label><input aria-describedby="infobulle" type="password" id="password2" class="acsa-tooltip" /><br />
 						<p id="infobulle" role="tooltip">Votre mot de passe doit contenir 8 caractères au moins.</p>
@@ -535,11 +495,11 @@ tabPanel : {
 					</form>
 			</article>
 			<table class="acsa-table-result">
-				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<caption> <span lang="en">Tooltip</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
 				<tr>
-					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
-					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
-					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
 				</tr>
 				<tr>
 					<td>OK</td>
@@ -547,31 +507,21 @@ tabPanel : {
 					<td>OK</td>
 				</tr>
 			</table>
-				<h4>Intégration</h4>
-<pre>
-	<code class="html">
-&lt;label for="password2"&gt;Mot de passe&lt;/label&gt;&lt;input aria-describedby="infobulle" 
-type="password" id="password2" class="acsa-tooltip" /&gt;&lt;br /&gt;
-&lt;p id="infobulle" role="tooltip"&gt;Votre mot de passe doit contenir 8 caractères au moins.&lt;/p&gt;		
-	</code>
-	<code class="Javascript">
-/* Javascript */
-/* 
-Parametres (composant_config.js)
-- required : toolTip.tooltip className value for the element wich called the tooltip referenced by aria-describedby
-*/
-tooltip : {
-	//CSS
-	tooltip : 'acsa-tooltip'
-},
-//Initialisation
-	var listTooltip = document.getElementsByClassName( acsa_config.tooltip.tooltip );
-	var tooltip = new Array();
-	for ( var i = 0, len = listTooltip.length; i < len; i++ ){
-		tooltip[i] = new Tooltip( listTooltip[i] );
-	}
-	</code>
-</pre>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">tooltip</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>Le message d'aide est lu.</td>
+					<td>Le message d'aide est lu.</td>
+					<td>Le message d'aide est lu.</td>
+				</tr>
+			</table>
 			<footer>
 				<h3>Références</h3>
 				<ul>
@@ -587,7 +537,7 @@ tooltip : {
 					<ul>
 						<li><a lang="en" class="a42-inboard" href="#tooltip"><img src="images/t1-prev.png" alt="tooltip" title="tooltip" /></a></li>
 						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
-						<li><img src="images/t1-next_gray.png" alt="" /></li>
+						<li><a lang="en" class="a42-inboard" href="#coche"><img src="images/t1-next.png" alt="Checkbox" title="Checkbox" /></a></li>
 					</ul>
 				</div>
 				<p>Un bouton d'action</p>
@@ -596,12 +546,12 @@ tooltip : {
 				<h3>Implémentation</h3>
 				<p>Un bouton d'action, équivalent à l'élément HTML <code>button</code> sous différentes formes</p>
 				<h3 id="test5" tabindex="-1">Test</h3>
-				<h4>Instruction</h4>
+				<h4>Instructions</h4>
 				<ol>
-					<li>Tabuler sur les trois boutons suivants;</li>
-					<li>Le premier bouton est actif;</li>
-					<li>Le second bouton est désactivé;</li>
-					<li>Le troisième bouton est actif et labellisé via un passage de texte;</li>
+					<li>Tabuler sur les trois boutons suivants.</li>
+					<li>Le premier bouton est actif.</li>
+					<li>Le second bouton est désactivé.</li>
+					<li>Le troisième bouton est actif et labellisé via un passage de texte.</li>
 					<li>Les deux boutons actifs affichent un  message javascript.</li>
 				</ol>
 				<div id="Zbutton">
@@ -617,11 +567,11 @@ tooltip : {
 				</div>
 			</article>
 			<table class="acsa-table-result">
-				<caption> <span lang="en">Slider</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<caption> <span lang="en">Tooltip</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
 				<tr>
-					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
-					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
-					<th scope="col" lang="en">Voice Over - Safari - OsX</th>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
 				</tr>
 				<tr>
 					<td>OK</td>
@@ -629,35 +579,1463 @@ tooltip : {
 					<td>OK</td>
 				</tr>
 			</table>
-				<h4>Intégration</h4>
-<pre>
-	<code class="html">
-&lt;span role="button" class="acsa-button" aria-disabled="false" tabindex="0"&gt;Confirmer votre message - 1&lt;/span&gt;		
-	</code>
-	<code class="Javascript">
-/* Javascript */
-/* 
-Parametres (composant_config.js)
-- required : button.button className value
-*/
-button : {
-	//CSS
-	button : 'acsa-button'
-}
-//Initialisation
-var listButton = document.getElementsByClassName( acsa_config.button.button );
-	for ( var i = 0, len = listButton.length; i < len; i++ ){
-		listButton[i].addEventListener( 'keydown', function setListButton( event ){
-			var key = event.keyCode;
-			button = new Button ( this, key );
-		}, false );
-	}
-	</code>
-</pre>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">button</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation d'un bouton simple</th>
+					<td>NVDA annonce «&nbsp;confirmer votre message 1, bouton&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;bouton, confirmer votre message 1&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;confirmer votre message 1, bouton&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Activation d'un bouton désactivé</th>
+					<td>NVDA annonce «&nbsp;confirmer votre message 2, bouton indisponible&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;bouton, confirmer votre message 2, non disponible&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;confirmer votre message 2, estompé, bouton&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Activation d'un bouton labellisé</th>
+					<td>NVDA annonce «&nbsp;confirmer votre message 3, bouton&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;bouton, confirmer votre message 3&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;confirmer votre message 3, bouton&nbsp;».</td>
+				</tr>
+			</table>
 			<footer>
 				<h3>Références</h3>
 				<ul>
 					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#button">WAI-ARIA 1.0 Authoring Practices - Design Pattern - button</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Case à cocher -->
+		<section class="a42-component" id="coche" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Checkbox</span> <span>[<a href="#test6">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#tooltip"><img src="images/t1-prev.png" alt="Tooltip" title="Tooltip" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#menubar"><img src="images/t1-next.png" alt="Menubar" title="Menubar" /></a></li>
+					</ul>
+				</div>
+				<p>Une case à cocher</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Une case à cocher, équivalent à l'élément HTML <code>input type="checkbox" </code></p>
+				<h3 id="test6" tabindex="-1">Test</h3>
+				<h4>Instructions</h4>
+				<ol>
+					<li>Tabuler sur le premier groupe de cases à cocher.</li>
+					<li>Tabuler sur la case à cocher isolée.</li>
+				</ol>
+					<h5 id="coul">Choisir la couleur</h5>
+					<ul aria-labelledby="coul" class="acsa-checkboxGroup">
+						<li role="checkbox" aria-labelledby=" coul noir" aria-checked="false" class=" acsa-checkbox acsa-checkbox-false" tabindex="0">
+							<span id="noir">Noir</span>
+						</li>
+						<li role="checkbox" aria-labelledby="coul rouge" aria-checked="false" tabindex="0" class=" acsa-checkbox acsa-checkbox-false">
+							<span id="rouge">Rouge</span>
+						</li>
+						<li role="checkbox" aria-labelledby="coul blanc" aria-checked="false" tabindex="0" class=" acsa-checkbox acsa-checkbox-false">
+							<span id="blanc">blanc</span>
+						</li>
+					</ul>
+					<h5>Exemple de case à cocher isolée</h5>
+					<p>
+						<span role="checkbox" aria-checked="false" aria-labelledby="oui" class="checkbox acsa-checkbox acsa-checkbox-false" tabindex="0"><span id="oui">Acceptez les conditions d'utilisation</span></span>
+					</p>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Checkbox</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">checkbox</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation d'un groupe de cases à cocher</th>
+					<td>NVDA annonce «&nbsp;Liste de 3 éléments, noir, choisir la couleur Noir, case à cocher, non cochée&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;case à cocher choisir la couleur noir non coché&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;Choisir la couleur avec trois éléments&nbsp;». En se déplaçant, VoiceOver annonce «&nbsp;Choisir la couleur, noir, non coché, case à cocher&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Activation et désactivation d'une case à cocher (dans un groupe ou isolée).</th>
+					<td>NVDA annonce, avec entrée et barre d'espace&nbsp;: «&nbsp;coché&nbsp;» et «&nbsp;non cochée&nbsp;».</td>
+					<td>Jaws annonce, avec entrée et barre d'espace&nbsp;: «&nbsp;cochée, choisir la couleur noir cochée&nbsp;» et «&nbsp;non cochée&nbsp;».</td>
+					<td>VoiceOver annonce, avec VO + espace&nbsp;: «&nbsp;cochée&nbsp;» et «&nbsp;non cochée&nbsp;».</td>
+				</tr>
+			</table>
+<h3>Intégration</h3>
+				<pre>
+<code class="html">
+/* HTML */
+Case à cocher groupée&nbsp;:
+&lt;ul aria-labelledby="coul" class="acsa-checkboxGroup"&gt;
+	&lt;li role="checkbox" aria-labelledby=" coul noir" aria-checked="false" class=" acsa-checkbox acsa-checkbox-false" tabindex="0"&gt;
+		&lt;span id="noir"&gt;Noir&lt;/span&gt;
+	&lt;/li&gt;
+	[...]
+&lt;/ul&gt;
+Case à cocher isolée&nbsp;:
+&lt;span role="checkbox" aria-checked="false" aria-labelledby="oui"
+ class="checkbox acsa-checkbox acsa-checkbox-false" tabindex="0"&gt;
+ &lt;span id="oui"&gt;Acceptez les conditions d'utilisation&lt;/span&gt;&lt;/span&gt;
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+	checkbox : {
+		//CSS
+		checkbox : 'acsa-checkbox',
+		stateFalse : 'acsa-checkbox-false',
+		stateTrue : 'acsa-checkbox-true'
+	}
+/* Initialisation
+	var listCheckbox = document.getElementsByClassName( acsa_config.checkbox.checkbox );
+	var checkbox = new Array();
+	for ( var i = 0, len = listCheckbox.length; i < len; i++ ){
+		listCheckbox[i].addEventListener( 'keydown', function setListChekbox( event ){
+			var key = event.keyCode;
+			checkbox[i] = new Checkbox ( this, key, event );
+		}, false );
+		listCheckbox[i].addEventListener( 'click', function setListChekbox(){
+			var key = 32;
+			checkbox[i] = new Checkbox ( this, key );
+		}, false );
+	}
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#checkbox">WAI-ARIA 1.0 Authoring Practices - Design Pattern - checkbox</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- Barre de menu -->
+		<section class="a42-component" id="menubar" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Menubar</span> <span>[<a href="#test7">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#coche"><img src="images/t1-prev.png" alt="Checkbox" title="Checkbox" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#accordion"><img src="images/t1-next.png" alt="Accordion" title="Accordion" /></a></li>
+					</ul>
+				</div>
+				<p>Une barre de menu</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Une barre de menu</p>
+				<h3 id="test7" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler jusqu'au menu</li>
+				</ol>
+				<h4>Menu de style</h4>
+				<ul role="menubar" class="acsa-menubar">
+					<li role="menuitem" aria-haspopup="true" tabindex="0" class="acsa-menuitem"><span>Police</span>
+						<ul role="menu">
+							<li data-n="1" role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Arial</span></li>
+							<li data-n="2" role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Verdana</span></li>
+							<li data-n="3" role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Time New Roman</span></li>
+						</ul>
+					</li>
+					<li role="menuitem" aria-haspopup="true" tabindex="-1" class="acsa-menuitem"><span>Style</span>
+						<ul role="menu">
+							<li role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Gras</span></li>
+							<li role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Italique</span></li>
+							<li role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Souligné</span></li>
+						</ul>
+					</li>
+					<li role="menuitem" aria-haspopup="true" tabindex="-1" class="acsa-menuitem"><span>Alignement</span>
+						<ul role="menu">
+							<li role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>A gauche</span></li>
+							<li role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>A droite</span></li>
+							<li role=" menuitemcheckbox" aria-checked="false" class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" tabindex="-1"><span>Justifié</span></li>
+						</ul>
+					</li>
+				</ul>
+				<p>Un contenu tabulable après le menu <a href="">Lien</a></p>
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Menubar</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">menubar</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA active le mode formulaire (signal sonore) et annonce «&nbsp;Police, sous-menu, 1 sur 3, menu&nbsp;».</td>
+					<td>Jaws active le mode formulaire (signal sonore) et annonce «&nbsp;police, arial, verdana, times new roman, sous-menu&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;Menu trois éléments&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Parcourir le niveau 1 du menu.</th>
+					<td>NVDA annonce «&nbsp;[titre du menu] + «&nbsp;sous-menu&nbsp;» + «&nbsp;[x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[titre du menu] + [liste des items du sous-menu] + sous menu&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;[titre de menu (répété autant de fois qu'il y a d'items dans le sous-menu)] + commande de menu&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Parcourir chaque item d'un sous-menu.</th>
+					<td>NVDA annonce «&nbsp;[titre de l'option] + non coché + «&nbsp;[x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[titre de l'option]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;[titre de l'option] + commande de menu + [x] éléments + niveau [x]&nbsp;». Le titre de l'option est répété deux fois.</td>
+				</tr>
+				<tr>
+					<th scope="row">Activer et désactiver une option de menu.</th>
+					<td>NVDA annonce «&nbsp;coché&nbsp;» et «&nbsp;non coché&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;coché&nbsp;» et «&nbsp;non coché&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;coché&nbsp;» et «&nbsp;non coché&nbsp;».</td>
+				</tr>				
+			</table>
+<h3>Intégration</h3>
+<pre>
+<code class="html">
+/* HTML */
+&lt;ul role="menubar" class="acsa-menubar"&gt;
+	&lt;li role="menuitem" aria-haspopup="true" tabindex="0" class="acsa-menuitem"&gt;&lt;span&gt;Police&lt;/span&gt;
+		&lt;ul role="menu"&gt;
+			&lt;li data-n="1" role=" menuitemcheckbox" aria-checked="false" 
+			class="acsa-menuitem-checkbox acsa-menuitem-checkbox-false" 
+			tabindex="-1"&gt;&lt;span&gt;Arial&lt;/span&gt;&lt;/li&gt;
+		[...]
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	[...]
+&lt;/ul&gt;
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+	menubar : {
+		//CSS
+		menuBar : 'acsa-menubar',
+		menuItem : 'acsa-menuitem',
+		menuItemCheckbox : 'acsa-menuitem-checkbox',
+		stateFalse : 'acsa-menuitem-checkbox-false',
+		stateTrue : 'acsa-menuitem-checkbox-true'		
+	}
+/* Initialisation */
+	var listMenuBar = document.getElementsByClassName( acsa_config.menubar.menuBar );
+	var menuBar = new Array();
+	for ( var i = 0, len = listMenuBar.length; i < len; i++ ){
+		menuBar[i] = new Menubar( listMenuBar[i] );
+	}
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#menu">WAI-ARIA 1.0 Authoring Practices - Design Pattern - menu</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- accordéon -->
+		<section class="a42-component" id="accordion" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Accordion</span> <span>[<a href="#test8">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#menubar"><img src="images/t1-prev.png" alt="Menubar" title="Menubar" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#menubar"><img src="images/t1-next.png" alt="tree" title="tree" /></a></li>
+					</ul>
+				</div>
+				<p>Un accordéon</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Un accordéon</p>
+				<h3 id="test8" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler jusqu'à l'accordéon</li>
+				</ol>
+				<h4>Un contenu en accordéon</h4>
+				<p>Un contenu tabulable avant l'accordéon <a href="">Lien</a></p>
+				 <div class="acsa-accordion" role="tablist">
+					<div id="tab-accordion0" role="tab" aria-selected="false" aria-controls="pan-accordion0" class="acsa-accordion-head" tabindex="0" data-n="0">Panneau 1</div>
+					<div id="pan-accordion0"  role="tabpanel" class="acsa-accordion-pan" aria-labelledby="tab-accordion0" aria-expanded="false" aria-hidden="true">
+						<h4 tabindex="0">Contenu du panneau 1</h4>
+							<p>
+							Lorsqu'un panneau ne contient que du texte, le contenu n'est pas vocalisé. Une première adaptation consiste à implémenter un <code>tabindex=0</code> sur le contenu ou sur le premier élément du contenu. Cela permet aux utilisateurs de lecteurs d'écran d'accéder au contenu du panneau via la touche <kbd>TAB</kbd>, ce qui déclenchera la vocalisation du contenu. 
+							</p>
+					</div>
+					<div id="tab-accordion1" role="tab" aria-selected="false" aria-controls="pan-accordion1" class="acsa-accordion-head" tabindex="-1" data-n="1" aria-describedby="pan-accordion1">Panneau 2</div>
+						<div id="pan-accordion1"  role="tabpanel" class="acsa-accordion-pan" aria-labelledby="tab1" aria-expanded="false" aria-hidden="true">
+							<div role="document" tabindex="0">
+								<p>
+								  Lorsque le panneau ne contient qu'un message, destiné à être lu et qui ne nécessite pas de donner accès au panneau de contenu, une propriété <code>aria-describedby="id_contenu"</code> implémentée sur l'élément <code>tab</code> peut être suffisante.
+								</p>
+								<p>Par défaut un tabpanel à un rôle 'application' implicite, ce qui interdit à un utilisateur de lecteur d'écran d'utiliser ses modes de navigation habituel. Pour donner la possibilité à l'utilisateur une navigation plus fine dans le contenu non focusable, il est possible de surcharger par un rôle "document" le contenu du panneau.
+								</p>
+							</div>
+						</div>
+					<div id="tab-accordion2" role="tab" aria-selected="false" aria-controls="pan-accordion2" class="acsa-accordion-head" tabindex="-1" data-n="2">Panneau 3</div>
+					<div id="pan-accordion2"  role="tabpanel" class="acsa-accordion-pan" aria-labelledby="tab-accordion2" aria-expanded="false" aria-hidden="true">
+						<div>
+							<p>
+							 Lorsque le panneau ne contient que des contenus focusables ou un mélange de contenus focusables et non-focusables, la touche <kbd>TAB</kbd> prends le focus sur le premier élément focusable dans le contenu du panneau.
+							</p>
+							<ul>
+								<li><a href="#">Exemple de lien 1</a></li>
+								<li><a href="#">Exemple de lien 2</a></li>
+								<li><a href="#">Exemple de lien 3</a></li>
+							</ul>
+						</div>
+					</div>					
+				 </div>
+				<p>Un contenu tabulable après l'accordéon <a href="">Lien</a></p>
+				
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Accordion</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">accordion</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA active le mode formulaire et annonce «&nbsp;Onglet, panneau 1, onglet 1 sur 3&nbsp;».</td>
+					<td>Jaws active le mode formulaire et annonce «&nbsp;onglet panneau 1, pour activer cet élément barre d'espace&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;panneau 1 tabulation, 1 sur 3.&nbsp;»</td>
+				</tr>
+				<tr>
+					<th scope="row">Déplacement entre les différents panneaux.</th>
+					<td>NVDA annonce «&nbsp;Panneau [x], onglet  [x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;Panneau [x], onglet  [x] sur [total]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;Panneau [x], tabulation [x] sur [total]&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Activation d'un panneau.</th>
+					<td>NVDA annonce «&nbsp;Panneau [x] sur [total], sélectionné&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;sélectionné&nbsp;».</td>
+					<td>VoiceOver avec la touche entrée le panneau est sélectionné mais VoiceOver ne l'annonce pas, par contre, si on appuie sur une flèche et qu'on revient, VoiceOver annonce que le panneau est sélectionné. Avec VO + espace VoiceOver annonce&nbsp;: «&nbsp;appuyé panneau tabulation [x] sur [total]&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Lecture du contenu d'un panneau.</th>
+					<td>NVDA&nbsp;: quitte le mode formulaire, annonce «&nbsp;fenêtre développée&nbsp;», le contenu est lu.</td>
+					<td>Jaws&nbsp;: quitte le mode formulaire et annonce «&nbsp;document&nbsp;», le contenu est lu.</td>
+					<td>VoiceOver&nbsp;: le contenu est lu avec vo+flèches droite et lorsqu'on interagit avec le contenu avec vo+flèche bas.</td>
+				</tr>
+				<tr>
+					<th scope="row">Lecture du contenu d'un panneau à la sélection de l'onglet (panneau 2 ).</th>
+					<td>NVDA&nbsp;: le contenu est lu.</td>
+					<td>Jaws&nbsp;: le contenu est lu.</td>
+					<td>VoiceOver&nbsp;: le contenu n'est pas lu.</td>
+				</tr>
+				<tr>
+					<th scope="row">Depuis le contenu d'un panneau, retour avec la tabulation sur l'onglet corrspondant.</th>
+					<td>NVDA annonce «&nbsp;Panneau [x], onglet sélectionné [x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;Panneau [x] sur [total]&nbsp;»</td>
+					<td>VoiceOver annonce  «&nbsp;Panneau [x], tabulation [x] sur [total]&nbsp;»</td>
+				</tr>
+				<tr>
+					<th scope="row">Sortir de l'accordéon avec la tabulation.</th>
+					<td>NVDA émet un signal sonore indiquant qu'il quitte le mode application.</td>
+					<td>Jaws n'annonce pas la sortie de l'accordéon.</td>
+					<td>VoiceOver n'annonce pas la sortie de l'accordéon.</td>
+				</tr>
+			</table>
+<h3>Intégration</h3>
+<pre>
+<code class="html">
+/* HTML */
+&lt;div class="acsa-accordion" role="tablist"&gt;
+	&lt;div id="tab-accordion0" role="tab" aria-selected="false" 
+	aria-controls="pan-accordion0" class="acsa-accordion-head" 
+	tabindex="0" data-n="0"&gt;Panneau 1&lt;/div&gt;
+	&lt;div id="pan-accordion0" role="tabpanel" class="acsa-accordion-pan" 
+	aria-labelledby="tab-accordion0" aria-expanded="false" aria-hidden="true"&gt;
+		&lt;h4 tabindex="0"&gt;Contenu du panneau 1&lt;/h4&gt;
+		[...]
+	&lt;/div&gt;
+	[...]
+&lt;/div&gt;
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+	accordion : {
+		//Css
+		accordion : 'acsa-accordion',
+		head : 'acsa-accordion-head',
+		headActive : 'acsa-accordion-head-active',
+		pan : 'acsa-accordion-pan',
+		panActive : 'acsa-accordion-pan-active'
+	},
+/* Initialisation */
+	var listAccordion = document.getElementsByClassName( acsa_config.accordion.accordion );
+	var accordion = new Array();
+	for ( var i = 0, len = listAccordion.length; i < len; i++ ){
+		accordion[i] = new Accordion( listAccordion[i] );
+	}
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#accordion">WAI-ARIA 1.0 Authoring Practices - Design Pattern - accordion</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- arborescence -->
+		<section class="a42-component" id="tree" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Tree</span> <span>[<a href="#test9">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#menubar"><img src="images/t1-prev.png" alt="accordion" title="accordion" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><a lang="en" class="a42-inboard" href="#datepicker"><img src="images/t1-next.png" alt="date picker" title="date picker" /></a></li>
+					</ul>
+				</div>
+				<p>Une arborescence</p>
+				<p>Note importante&nbsp;: <span lang="en">VoiceOver</span> ne gère pas correctement la position du focus courant si celle-ci est gérée via tabindex. En conséquence, l'arborescence utilise la propriété aria-activedescendant.</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Une arborescence</p>
+				<h3 id="test9" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler jusqu'à l'arborescence</li>
+				</ol>
+				<p>Un contenu tabulable avant l'arborescence <a href="">Lien</a></p>
+				 <h4 id="tree-title">Documents</h4>
+				 <ul class="acsa-tree-root-level" aria-labelledby="tree-title" role="tree">
+					<li class="acsa-tree-item acsa-tree-item-visible acsa-tree-item-subtree" data-level="0" aria-expanded="false" tabindex="-1" role="treeitem">
+						<span id="submenuname1">Travail</span>
+						<ul class="acsa-tree-subgroup" role="group" aria-labelledby="submenuname1">
+							<li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item">
+							Mon-cv.odt
+							</li>
+							<li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item">
+							Mon planning.odt
+							</li>
+							<li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item">
+							Projet.odt
+							</li>							
+						</ul>
+					</li>
+					<li class="acsa-tree-item acsa-tree-item-visible acsa-tree-item-subtree" data-level="0" aria-expanded="false" tabindex="-1" role="treeitem">
+						<span id="submenuname2">Loisirs</span>
+						<ul class="acsa-tree-subgroup" role="group" aria-labelledby="submenuname2">
+							<li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item">
+							Photos.zip
+							</li>
+							<li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item">
+							Video.zip
+							</li>						
+						</ul>
+					</li>
+					<li class="acsa-tree-item acsa-tree-item-visible acsa-tree-item-subtree" data-level="0" aria-expanded="false" tabindex="-1" role="treeitem">
+						<span id="submenuname3">Famille</span>
+						<ul class="acsa-tree-subgroup" role="group" aria-labelledby="submenuname3">
+							<li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item">
+							Photos_famille.zip
+							</li>						
+						</ul>
+					</li>
+				</ul>
+				<p>Un contenu tabulable après l'arborescence <a href="">Lien</a></p>
+				
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Tree</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>KO</td>
+				</tr>
+			</table>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">accordion</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA active le mode formulaire et annonce «&nbsp;Arborescence + [titre de l'entrée] + réduit, non sélectionné, [x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[nom de l'entrée} + [contenu du sous menu] + [message d'aide]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;tableau, ligne 1 sur 3, sélectionné&nbsp;», en se déplaçant en colonne, VoiceOver annonce «&nbsp;[titre de l'entrée] condensé&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Activer une entrée de l'arborescence (ouverture du niveau inférieur).</th>
+					<td>NVDA annonce «&nbsp;[titre de l'entrée] développé, [x] sur [total], niveau [x]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[titre de l'entrée] + [contenu du sous menu] + [x] sur [total] + ouvert&nbsp;».</td>
+					<td>VoiceOver&nbsp;: l’activation s’effectue en se déplaçant avec vo+flèche bas (mode navigation désactivé), puis en appuyant sur la flèche droite pour développer l’arborescence. VO annonce « cliquabe, ligne [x] étendu ». Pour vraiment pouvoir développer l’arborescence il faut effectuer l’action de clic en appuyant sur vo+espace. Pour lire le contenu de l’arborescence, il faut se déplacer sur la colonne 3 qui apparaît sans que VO ne l’indique.</td>
+				</tr>
+				<tr>
+					<th scope="row">Revenir au niveau supérieur, fermer le niveau de l'arborescence.</th>
+					<td>NVDA annonce «&nbsp;[titre de l'entrée] réduit, [x] sur [total], niveau [x]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[titre de l'entrée] + [contenu du sous menu] + fermé&nbsp;»</td>
+					<td>VO ne restitue que la disposition tableau. L’utilisation des flèches ne permet pas d’étendre et de replier l’arborescence. L’arborescence ne s'active pas avec les flèches mais en appuyant sur vo+espace.</td>
+				</tr>
+			</table>
+			<p>Note&nbsp;: VoiceOver a beaucoup de difficultés avec ce motif de conception. Une solution d'implémentation alternative est décrite dans cet article en anglais&nbsp;: <a href="http://accessibleculture.org/articles/2013/02/not-so-simple-aria-tree-views-and-screen-readers/#best" lang="en">(Not so) Simple ARIA Tree Views and Screen Readers</a>.</p>
+<h3>Intégration</h3>
+<pre>
+<code class="html">
+/* HTML */
+&lt;ul class="acsa-tree-root-level" aria-labelledby="tree-title" role="tree"&gt;
+	&lt;li class="acsa-tree-item acsa-tree-item-visible acsa-tree-item-subtree" 
+	data-level="0" aria-expanded="false" tabindex="-1" role="treeitem"&gt;
+		&lt;span&gt;Travail&lt;/span&gt;
+		&lt;ul class="acsa-tree-subgroup" role="group"&gt;
+			&lt;li class="acsa-tree-item" data-level="1" tabindex="-1" role="tree-item"&gt;
+				Mon-cv.odt
+			&lt;/li&gt;
+			[...]
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	[...]
+&lt;/ul&gt;
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+	tree : {
+		//Css
+		tree : 'acsa-tree-root-level',
+		subtree : 'acsa-tree-subgroup',
+		subtreeActive: 'acsa-tree-subgroup-active',
+		treeitem: 'acsa-tree-item',
+		treeitemSubtree: 'acsa-tree-item-subtree',
+		treeitemSubtreeActive: 'acsa-tree-item-subtree-active',
+		treeitemVisible: 'acsa-tree-item-visible'
+	},
+/* Initialisation */
+	var listTree = document.getElementsByClassName( acsa_config.tree.tree );
+	var tree = new Array();
+	for ( var i = 0, len = listTree.length; i < len; i++ ){
+		tree[i] = new Tree( listTree[i], i );
+	}
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#TreeView">WAI-ARIA 1.0 Authoring Practices - Design Pattern - treewiew</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- date picker -->
+		<section class="a42-component" id="datepicker" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Date Picker</span> <span>[<a href="#test10">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#tree"><img src="images/t1-prev.png" alt="tree" title="tree" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<li><img src="images/t1-next_gray.png" alt="" /></li>
+					</ul>
+				</div>
+				<p>Un calendrier</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<p>Un calendrier</p>
+				<h3 id="test10" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler jusqu'au calendrier</li>
+				</ol>
+				<p>Un contenu tabulable avant le calendrier <a href="">Lien</a></p>
+				<h4>Choisir une date</h4>
+				<div class="acsa-date-picker-main" role="application">
+					<div id="acsa-date-picker-head" class="acsa-date-picker-head">		
+						<button type="button" class="acsa-date-picker-prev"><span aria-hidden="true">&lt;</span><span class="invisible">Précédent</span></button>     
+						<span role="header" id="acsa-datepicker-header" class="acsa-datepicker-header" aria-live="assertive" aria-atomic="true"></span> 
+						<button type="button" class="acsa-date-picker-next"><span aria-hidden="true">&gt;</span><span class="invisible">Suivant</span></button>						
+					</div>    
+						<table class="" role="grid" aria-labelledby="acsa-datepicker-header" data-input="mydate">
+							<thead role="presentation">     
+								<tr role="row">             
+									<th role="columnheader" aria-label="Dimanche">
+										<abbr title="Dimanche">Di</abbr>
+									</th>             
+									<th role="columnheader" aria-label="Lundi">
+										<abbr title="Lundi">Lu</abbr>
+									</th>             
+									<th role="columnheader" aria-label="Mardi">
+										<abbr title="Mardi">Ma</abbr>
+									</th>             
+									<th  role="columnheader" aria-label="Mercredi">
+										<abbr title="Wednesday">Me</abbr>
+									</th>             
+									<th  role="columnheader" aria-label="Jeudi">
+										<abbr title="Jeudi">Je</abbr>
+									</th>             
+									<th  role="columnheader" aria-label="Vendredi">
+										<abbr title="Vendredi">Ve</abbr>
+									</th>             
+									<th  role="columnheader" aria-label="Samedi">
+										<abbr title="Samedi">Sa</abbr>
+									</th>           
+								</tr>    
+							</thead>    
+							<tbody role="presentation">          
+								<tr role="row">             
+									<td role="gridcell" ></td>
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  				
+								</tr>
+								<tr role="row">             
+									<td role="gridcell" ></td>
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  				
+								</tr> 
+								<tr role="row">             
+									<td role="gridcell" ></td>
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  				
+								</tr> 
+								<tr role="row">             
+									<td role="gridcell" ></td>
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  				
+								</tr>  
+								<tr role="row">             
+									<td role="gridcell" ></td>
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  				
+								</tr>
+								<tr role="row">             
+									<td role="gridcell" ></td>
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  
+									<td role="gridcell" ></td>  				
+								</tr>  							
+							</tbody>   
+						</table>
+				</div>
+				<form action="#">
+					<label for="mydate">Date (jj/mm/aaaa)</label><br />
+					<input type="text" id="mydate" />
+				</form>
+				 
+				<p>Un contenu tabulable après le calendrier <a href="">Lien</a></p>
+				
+			</article>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Datepicker</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">Datepicker</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA annonce&nbsp;: «&nbsp;Juillet 2015, tableau, éditable, [nom du jour] + [numéro du jour], éditable, paragraphe&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;début de la région application + [nom du jour] + [numéro du jour] + controle de l'application&nbsp;». </td>
+					<td>Après un déplacement avec VO+flèche droite, VO annonce «&nbsp;sortie du repère principal, entrée du repère application. Précédent bouton&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Déplacement dans la grille.</th>
+					<td>NVDA annonce&nbsp;: «&nbsp;[nom du jour], éditable + [numéro du jour], éditable, paragraphe + [numéro de colonne]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[nom du jour] + [numéro du jour]&nbsp;».</td>
+					<td>Les déplacements dans le tableau doivent être faits manuellement. Lorsqu’on se déplace dans une colonne, VoiceOver annonce le jour.</td>
+				</tr>
+				<tr>
+					<th scope="row">Activer le mois suivant (tabulation arrière à partir d'une date quelconque).</th>
+					<td>NVDA annonce&nbsp;: «&nbsp;suivant bouton&nbsp;» puis, après activation, «&nbsp;[nom du mois]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;Hors du tableau bouton suivant, controle de l'application&nbsp;», puis après activation «&nbsp;[nom du mois&nbsp;»].</td>
+					<td>VoiceOver perd le focus et oblige à trouver manuellement le bouton suivant. Après activation, VoiceOver annonce «&nbsp;[nom du mois]&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Sélectionner une date (avec entrée).</th>
+					<td>NVDA annonce&nbsp;: «&nbsp;Date jj/mm/aaa, édition avec autocomplétion [date saisie]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;Hors du tableau, fin de la région d'application, édition sate jj/mm/aaa [date saisie]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;[date] appuyé, cliquable&nbsp;».</td>
+				</tr>
+			</table>
+<h3>Intégration</h3>
+<pre>
+<code class="html">
+/* HTML */
+&lt;div class="acsa-date-picker-main" role="application"&gt;
+	&lt;div id="acsa-date-picker-head" class="acsa-date-picker-head"&gt;		
+		&lt;button type="button" class="acsa-date-picker-prev"&gt;
+		&lt;span aria-hidden="true"&gt;&lt;&lt;/span&gt;&lt;span class="invisible"&gt;Précédent&lt;/span&gt;&lt;/button&gt;     
+		&lt;span role="header" id="acsa-datepicker-header" 
+		class="acsa-datepicker-header" aria-live="assertive" aria-atomic="true"&gt;&lt;/span&gt; 
+		&lt;button type="button" class="acsa-date-picker-next"&gt;
+		&lt;span aria-hidden="true"&gt;&gt;&lt;/span&gt;&lt;span class="invisible"&gt;Suivant&lt;/span&gt;&lt;/button&gt;						
+	&lt;/div&gt;    
+	&lt;table class="" role="grid" aria-labelledby="acsa-datepicker-header" data-input="mydate"&gt;
+		&lt;thead role="presentation"&gt;     
+			&lt;tr role="row"&gt;             
+				&lt;th role="columnheader" aria-label="Dimanche"&gt;
+					&lt;abbr title="Dimanche"&gt;Di&lt;/abbr&gt;
+				&lt;/th&gt; 
+				[...]
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody role="presentation"&gt;          
+			&lt;tr role="row"&gt;             
+				&lt;td role="gridcell" &gt;&lt;/td&gt;
+				[...]
+			&lt;/tr&gt;
+			[...]
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+			
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+	datepicker: {
+		datepicker: 'acsa-date-picker-main',
+		head: 'acsa-datepicker-header',
+		datepickerPrev: 'acsa-date-picker-prev',
+		datepickerNext: 'acsa-date-picker-next',
+		datepickerActive: 'acsa-date-picker-active',
+		today: 'acsa-date-picker-today',
+		dayName: 'acsa-day-name'
+	}
+/* Initialisation */
+	var listDatepicker = document.getElementsByClassName( acsa_config.datepicker.datepicker );
+	var datepicker = new Array();
+	for ( var i = 0, len = listDatepicker.length; i < len; i++ ){
+		datepicker[i] = new DatePicker( listDatepicker[i] );
+	}
+</code>
+</pre>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#datepicker">WAI-ARIA 1.0 Authoring Practices - Design Pattern - date picker</a></li>
+				</ul>
+			</footer>
+		</section>
+<!-- autocomplete -->
+		<section class="a42-component" id="autocomplete" tabindex="-1">
+			<header>
+				<div>
+					<h2 class="CTitre"><span lang="en">Autocomplete</span> <span>[<a href="#test11">Aller au test</a>]</span></h2>
+					<ul>
+						<li><a lang="en" class="a42-inboard" href="#tree"><img src="images/t1-prev.png" alt="Datepicker" title="Datepicker" /></a></li>
+						<li><a href="#menu"><img src="images/t1-menu.png" alt="Menu" /></a></li>
+						<!--<li><img src="images/t1-next_gray.png" alt="" /></li>-->
+					</ul>
+				</div>
+				<p>Une liste d'autocomplétion</p>
+				<p>Note&nbsp;: le modèle de conception <span lang="en">autocomplete</span> ne donne pas d'indication précise sur le comportement général du rôle <span lang="en">autocomplete</span> et ne décrit que des actions au clavier génériques, particulièrement pour le cas d'une autocomplétion en écriture (e.g le champ de saisie est éditable).</p>
+				<p>Deux exemples sont présentés ici, une liste d'autocomplétion en lecture seule qui simule le comportement d'une liste <span lang="en">select</span> et un exemple générique de liste d'autocomplétion en écriture qui simule les comportements habituels, tels qu'ils sont généralement implémentés sur le champ de saisie d'un moteur de recherche par exemple.
+				</p>
+				<p>Les deux exemples peuvent s'écarter des comportements génériques des interactions au clavier tels qu'ils sont décrits par le modèle de conception afin de les adapter au but recherché.</p>
+			</header>
+			<article role="article">
+				<h3>Implémentation</h3>
+				<ol>
+					<li>Une autocomplétion en mode lecture seule&nbsp;: ce type d'autocomplétion simule une liste select.
+						Avec NVDA, le composant provoque des bugs avec les flèches de direction (perte de focus). Un rôle <span lang="en">application</span> sur le <span lang="en">wrapper</span> principal du composant et un attribut tabindex = 0 (pour donner le focus sur le champ de saisie), permettent de contrôler ces effets indésirables.
+						Cette adaptation n'est pas utilisable sur les listes d'autocomplétion en écriture.
+					</li>
+				</ol>
+				<h3 id="test11" tabindex="-1">Test</h3>
+				<h4>Instruction</h4>
+				<ol>
+					<li>Tabuler jusqu'au champ de saisie</li>
+				</ol>
+				<p>Un contenu tabulable avant l'autocomplétion <a href="">Lien</a></p>
+				<form action="#">
+				<div class="acsa-autocomplete">
+					<h4><span lang="en">Autocomplete list - readonly</span></h4>
+					<label for="choice">Choisissez le pays</label>
+					<div class="acsa-textbox-border">
+						<input type="text" id="choice" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="acsa-listbox" aria-readonly="true" data-start="" value="" class="acsa-textbox-list" tabindex="0" /><button class="acsa-open-close" type="button"><span aria-hidden="true"></span><span class="invisible"></span></button>
+					</div>
+						<ul role="listbox" class="acsa-autocomplete-listbox" id="acsa-listbox">
+							<li role="option" data-value="Afghanistan">Afghanistan </li>
+							<li role="option" data-value="Afrique_Centrale">Afrique_Centrale </li>
+							<li role="option" data-value="Afrique_du_sud">Afrique_du_Sud </li>
+							<li role="option" data-value="Albanie">Albanie </li>
+							<li role="option" data-value="Algerie">Algerie </li>
+							<li role="option" data-value="Allemagne">Allemagne </li>
+							<li role="option" data-value="Andorre">Andorre </li>
+							<li role="option" data-value="Angola">Angola </li>
+							<li role="option" data-value="Anguilla">Anguilla </li>
+							<li role="option" data-value="Arabie_Saoudite">Arabie_Saoudite </li>
+							<li role="option" data-value="Argentine">Argentine </li>
+							<li role="option" data-value="Armenie">Armenie </li>
+							<li role="option" data-value="Australie">Australie </li>
+							<li role="option" data-value="Autriche">Autriche </li>
+							<li role="option" data-value="Azerbaidjan">Azerbaidjan </li>
+							<li role="option" data-value="Bahamas">Bahamas </li>
+							<li role="option" data-value="Bangladesh">Bangladesh </li>
+							<li role="option" data-value="Barbade">Barbade </li>
+							<li role="option" data-value="Bahrein">Bahrein </li>
+							<li role="option" data-value="Belgique">Belgique </li>
+							<li role="option" data-value="Belize">Belize </li>
+							<li role="option" data-value="Benin">Benin </li>
+							<li role="option" data-value="Bermudes">Bermudes </li>
+							<li role="option" data-value="Bielorussie">Bielorussie </li>
+							<li role="option" data-value="Bolivie">Bolivie </li>
+							<li role="option" data-value="Botswana">Botswana </li>
+							<li role="option" data-value="Bhoutan">Bhoutan </li>
+							<li role="option" data-value="Boznie_Herzegovine">Boznie_Herzegovine </li>
+							<li role="option" data-value="Bresil">Bresil </li>
+							<li role="option" data-value="Brunei">Brunei </li>
+							<li role="option" data-value="Bulgarie">Bulgarie </li>
+							<li role="option" data-value="Burkina_Faso">Burkina_Faso </li>
+							<li role="option" data-value="Burundi">Burundi </li>
+							<li role="option" data-value="Caiman">Caiman </li>
+							<li role="option" data-value="Cambodge">Cambodge </li>
+							<li role="option" data-value="Cameroun">Cameroun </li>
+							<li role="option" data-value="Canada">Canada </li>
+							<li role="option" data-value="Canaries">Canaries </li>
+							<li role="option" data-value="Cap_vert">Cap_Vert </li>
+							<li role="option" data-value="Chili">Chili </li>
+							<li role="option" data-value="Chine">Chine </li>
+							<li role="option" data-value="Chypre">Chypre </li>
+							<li role="option" data-value="Colombie">Colombie </li>
+							<li role="option" data-value="Comores">Colombie </li>
+							<li role="option" data-value="Congo">Congo </li>
+							<li role="option" data-value="Congo_democratique">Congo_democratique </li>
+							<li role="option" data-value="Cook">Cook </li>
+							<li role="option" data-value="Coree_du_Nord">Coree_du_Nord </li>
+							<li role="option" data-value="Coree_du_Sud">Coree_du_Sud </li>
+							<li role="option" data-value="Costa_Rica">Costa_Rica </li>
+							<li role="option" data-value="Cote_d_Ivoire">Côte_d_Ivoire </li>
+							<li role="option" data-value="Croatie">Croatie </li>
+							<li role="option" data-value="Cuba">Cuba </li>
+							<li role="option" data-value="Danemark">Danemark </li>
+							<li role="option" data-value="Djibouti">Djibouti </li>
+							<li role="option" data-value="Dominique">Dominique </li>
+							<li role="option" data-value="Egypte">Egypte </li>
+							<li role="option" data-value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </li>
+							<li role="option" data-value="Equateur">Equateur </li>
+							<li role="option" data-value="Erythree">Erythree </li>
+							<li role="option" data-value="Espagne">Espagne </li>
+							<li role="option" data-value="Estonie">Estonie </li>
+							<li role="option" data-value="Etats_Unis">Etats_Unis </li>
+							<li role="option" data-value="Ethiopie">Ethiopie </li>
+							<li role="option" data-value="Falkland">Falkland </li>
+							<li role="option" data-value="Feroe">Feroe </li>
+							<li role="option" data-value="Fidji">Fidji </li>
+							<li role="option" data-value="Finlande">Finlande </li>
+							<li role="option" data-value="France">France </li>
+							<li role="option" data-value="Gabon">Gabon </li>
+							<li role="option" data-value="Gambie">Gambie </li>
+							<li role="option" data-value="Georgie">Georgie </li>
+							<li role="option" data-value="Ghana">Ghana </li>
+							<li role="option" data-value="Gibraltar">Gibraltar </li>
+							<li role="option" data-value="Grece">Grece </li>
+							<li role="option" data-value="Grenade">Grenade </li>
+							<li role="option" data-value="Groenland">Groenland </li>
+							<li role="option" data-value="Guadeloupe">Guadeloupe </li>
+							<li role="option" data-value="Guam">Guam </li>
+							<li role="option" data-value="Guatemala">Guatemala</li>
+							<li role="option" data-value="Guernesey">Guernesey </li>
+							<li role="option" data-value="Guinee">Guinee </li>
+							<li role="option" data-value="Guinee_Bissau">Guinee_Bissau </li>
+							<li role="option" data-value="Guinee equatoriale">Guinee_Equatoriale </li>
+							<li role="option" data-value="Guyana">Guyana </li>
+							<li role="option" data-value="Guyane_Francaise ">Guyane_Francaise </li>
+							<li role="option" data-value="Haiti">Haiti </li>
+							<li role="option" data-value="Hawaii">Hawaii </li>
+							<li role="option" data-value="Honduras">Honduras </li>
+							<li role="option" data-value="Hong_Kong">Hong_Kong </li>
+							<li role="option" data-value="Hongrie">Hongrie </li>
+							<li role="option" data-value="Inde">Inde </li>
+							<li role="option" data-value="Indonesie">Indonesie </li>
+							<li role="option" data-value="Iran">Iran </li>
+							<li role="option" data-value="Iraq">Iraq </li>
+							<li role="option" data-value="Irlande">Irlande </li>
+							<li role="option" data-value="Islande">Islande </li>
+							<li role="option" data-value="Israel">Israel </li>
+							<li role="option" data-value="Italie">italie </li>
+							<li role="option" data-value="Jamaique">Jamaique </li>
+							<li role="option" data-value="Jan Mayen">Jan Mayen </li>
+							<li role="option" data-value="Japon">Japon </li>
+							<li role="option" data-value="Jersey">Jersey </li>
+							<li role="option" data-value="Jordanie">Jordanie </li>
+							<li role="option" data-value="Kazakhstan">Kazakhstan </li>
+							<li role="option" data-value="Kenya">Kenya </li>
+							<li role="option" data-value="Kirghizstan">Kirghizistan </li>
+							<li role="option" data-value="Kiribati">Kiribati </li>
+							<li role="option" data-value="Koweit">Koweit </li>
+							<li role="option" data-value="Laos">Laos </li>
+							<li role="option" data-value="Lesotho">Lesotho </li>
+							<li role="option" data-value="Lettonie">Lettonie </li>
+							<li role="option" data-value="Liban">Liban </li>
+							<li role="option" data-value="Liberia">Liberia </li>
+							<li role="option" data-value="Liechtenstein">Liechtenstein </li>
+							<li role="option" data-value="Lituanie">Lituanie </li>
+							<li role="option" data-value="Luxembourg">Luxembourg </li>
+							<li role="option" data-value="Lybie">Lybie </li>
+							<li role="option" data-value="Macao">Macao </li>
+							<li role="option" data-value="Macedoine">Macedoine </li>
+							<li role="option" data-value="Madagascar">Madagascar </li>
+							<li role="option" data-value="Madère">Madère </li>
+							<li role="option" data-value="Malaisie">Malaisie </li>
+							<li role="option" data-value="Malawi">Malawi </li>
+							<li role="option" data-value="Maldives">Maldives </li>
+							<li role="option" data-value="Mali">Mali </li>
+							<li role="option" data-value="Malte">Malte </li>
+							<li role="option" data-value="Man">Man </li>
+							<li role="option" data-value="Mariannes du Nord">Mariannes du Nord </li>
+							<li role="option" data-value="Maroc">Maroc </li>
+							<li role="option" data-value="Marshall">Marshall </li>
+							<li role="option" data-value="Martinique">Martinique </li>
+							<li role="option" data-value="Maurice">Maurice </li>
+							<li role="option" data-value="Mauritanie">Mauritanie </li>
+							<li role="option" data-value="Mayotte">Mayotte </li>
+							<li role="option" data-value="Mexique">Mexique </li>
+							<li role="option" data-value="Micronesie">Micronesie </li>
+							<li role="option" data-value="Midway">Midway </li>
+							<li role="option" data-value="Moldavie">Moldavie </li>
+							<li role="option" data-value="Monaco">Monaco </li>
+							<li role="option" data-value="Mongolie">Mongolie </li>
+							<li role="option" data-value="Montserrat">Montserrat </li>
+							<li role="option" data-value="Mozambique">Mozambique </li>
+							<li role="option" data-value="Namibie">Namibie </li>
+							<li role="option" data-value="Nauru">Nauru </li>
+							<li role="option" data-value="Nepal">Nepal </li>
+							<li role="option" data-value="Nicaragua">Nicaragua </li>
+							<li role="option" data-value="Niger">Niger </li>
+							<li role="option" data-value="Nigeria">Nigeria </li>
+							<li role="option" data-value="Niue">Niue </li>
+							<li role="option" data-value="Norfolk">Norfolk </li>
+							<li role="option" data-value="Norvege">Norvege </li>
+							<li role="option" data-value="Nouvelle_Caledonie">Nouvelle_Caledonie </li>
+							<li role="option" data-value="Nouvelle_Zelande">Nouvelle_Zelande </li>
+							<li role="option" data-value="Oman">Oman </li>
+							<li role="option" data-value="Ouganda">Ouganda </li>
+							<li role="option" data-value="Ouzbekistan">Ouzbekistan </li>
+							<li role="option" data-value="Pakistan">Pakistan </li>
+							<li role="option" data-value="Palau">Palau </li>
+							<li role="option" data-value="Palestine">Palestine </li>
+							<li role="option" data-value="Panama">Panama </li>
+							<li role="option" data-value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </li>
+							<li role="option" data-value="Paraguay">Paraguay </li>
+							<li role="option" data-value="Pays_Bas">Pays_Bas </li>
+							<li role="option" data-value="Perou">Perou </li>
+							<li role="option" data-value="Philippines">Philippines </li>
+							<li role="option" data-value="Pologne">Pologne </li>
+							<li role="option" data-value="Polynesie">Polynesie </li>
+							<li role="option" data-value="Porto_Rico">Porto_Rico </li>
+							<li role="option" data-value="Portugal">Portugal </li>
+							<li role="option" data-value="Qatar">Qatar </li>
+							<li role="option" data-value="Republique_Dominicaine">Republique_Dominicaine </li>
+							<li role="option" data-value="Republique_Tcheque">Republique_Tcheque </li>
+							<li role="option" data-value="Reunion">Reunion </li>
+							<li role="option" data-value="Roumanie">Roumanie </li>
+							<li role="option" data-value="Royaume_Uni">Royaume_Uni </li>
+							<li role="option" data-value="Russie">Russie </li>
+							<li role="option" data-value="Rwanda">Rwanda </li>
+							<li role="option" data-value="Sahara Occidental">Sahara Occidental </li>
+							<li role="option" data-value="Sainte_Lucie">Sainte_Lucie </li>
+							<li role="option" data-value="Saint_Marin">Saint_Marin </li>
+							<li role="option" data-value="Salomon">Salomon </li>
+							<li role="option" data-value="Salvador">Salvador </li>
+							<li role="option" data-value="Samoa_Occidentales">Samoa_Occidentales</li>
+							<li role="option" data-value="Samoa_Americaine">Samoa_Americaine </li>
+							<li role="option" data-value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </li>
+							<li role="option" data-value="Senegal">Senegal </li>
+							<li role="option" data-value="Seychelles">Seychelles </li>
+							<li role="option" data-value="Sierra Leone">Sierra Leone </li>
+							<li role="option" data-value="Singapour">Singapour </li>
+							<li role="option" data-value="Slovaquie">Slovaquie </li>
+							<li role="option" data-value="Slovenie">Slovenie</li>
+							<li role="option" data-value="Somalie">Somalie </li>
+							<li role="option" data-value="Soudan">Soudan </li>
+							<li role="option" data-value="Sri_Lanka">Sri_Lanka </li>
+							<li role="option" data-value="Suede">Suede </li>
+							<li role="option" data-value="Suisse">Suisse </li>
+							<li role="option" data-value="Surinam">Surinam </li>
+							<li role="option" data-value="Swaziland">Swaziland </li>
+							<li role="option" data-value="Syrie">Syrie </li>
+							<li role="option" data-value="Tadjikistan">Tadjikistan </li>
+							<li role="option" data-value="Taiwan">Taiwan </li>
+							<li role="option" data-value="Tonga">Tonga </li>
+							<li role="option" data-value="Tanzanie">Tanzanie </li>
+							<li role="option" data-value="Tchad">Tchad </li>
+							<li role="option" data-value="Thailande">Thailande </li>
+							<li role="option" data-value="Tibet">Tibet </li>
+							<li role="option" data-value="Timor_Oriental">Timor_Oriental </li>
+							<li role="option" data-value="Togo">Togo </li>
+							<li role="option" data-value="Trinite_et_Tobago">Trinite_et_Tobago </li>
+							<li role="option" data-value="Tristan da cunha">Tristan de cuncha </li>
+							<li role="option" data-value="Tunisie">Tunisie </li>
+							<li role="option" data-value="Turkmenistan">Turmenistan </li>
+							<li role="option" data-value="Turquie">Turquie </li>
+							<li role="option" data-value="Ukraine">Ukraine </li>
+							<li role="option" data-value="Uruguay">Uruguay </li>
+							<li role="option" data-value="Vanuatu">Vanuatu </li>
+							<li role="option" data-value="Vatican">Vatican </li>
+							<li role="option" data-value="Venezuela">Venezuela </li>
+							<li role="option" data-value="Vierges_Americaines">Vierges_Americaines </li>
+							<li role="option" data-value="Vierges_Britanniques">Vierges_Britanniques </li>
+							<li role="option" data-value="Vietnam">Vietnam </li>
+							<li role="option" data-value="Wake">Wake </li>
+							<li role="option" data-value="Wallis et Futuma">Wallis et Futuma </li>
+							<li role="option" data-value="Yemen">Yemen </li>
+							<li role="option" data-value="Yougoslavie">Yougoslavie </li>
+							<li role="option" data-value="Zambie">Zambie </li>
+							<li role="option" data-value="Zimbabwe">Zimbabwe </li>
+						</ul>
+				</div>
+				<p>Un contenu tabulable après l'autocomplétion <a href="">Lien</a></p>
+				<table class="acsa-table-result">
+				<caption> <span lang="en">autocomplete</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>OK</td>
+					<td>OK</td>
+					<td>OK</td>
+				</tr>
+			</table>
+			<table class="acsa-table-result">
+				<caption> <span lang="en">autocomplete</span> - Principaux éléments de restitution <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<td></td>
+					<th scope="col">NVDA - Firefox 37.02 - Win 8</th>
+					<th scope="col">JAWS 15 - IE11 - Win 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<th scope="row">Activation</th>
+					<td>NVDA active le mode formulaire et annonce&nbsp;: «&nbsp;Application, choisissez le pays, liste déroulante, réduit, éditable avec autocomplétion, sélectionné [nom du pays]&nbsp;».</td>
+					<td>Jaws active le mode formulaire et annonce «&nbsp;zone de liste déroulante choisissez un pays, [nom du pays]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;entrée du repère application, choisissez un pays, [nom du pays]&nbsp;».</td>
+				</tr>
+				<tr>
+					<th scope="row">Faire défiler les items de la liste.</th>
+					<td>NVDA annonce «&nbsp;[nom du pays]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[nom du pays]&nbsp;».</td>
+					<td>Avec VoiceOver, lorsqu’on se déplace dans la liste avec les flèches, le contenu change mais il n’est pas annoncé par VO (problème de tampon virtuel qui ne se rafraîchit pas). Pour avoir la mise à jour du contenu affiché, il faut quitter la liste avec vo+flèche gauche ou droite et y revenir. </td>
+				</tr>
+				<tr>
+					<th scope="row">Ouvrir la liste des pays.</th>
+					<td>NVDA annonce «&nbsp;afficher la liste des options bouton&nbsp;» puis «&nbsp;choisissez le pays, liste déroulante, développée, éditable avec autocomplétion, [nom du pays]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;afficher la liste des options bouton&nbsp;» puis «&nbsp;liste [nom du pays]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;afficher la liste des options&nbsp;» bouton. Lorsqu’on l’active, il annonce «&nbsp;appuyé afficher la liste des options bouton&nbsp;». </td>
+				</tr>
+				<tr>
+					<th scope="row">Parcourir la liste des pays.</th>
+					<td>NVDA annonce «&nbsp;[nom du pays], [x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[nom du pays], contrôle de l'application&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;[nom du pays], [x] sur [total]&nbsp;». </td>
+				</tr>
+				<tr>
+					<th scope="row">Chercher un pays en tapant une lettre.</th>
+					<td>NVDA annonce «&nbsp;[nom du pays], [x] sur [total]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[nom du pays], contrôle de l'application&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;[nom du pays], [x] sur [total]&nbsp;». </td>
+				</tr>
+				<tr>
+					<th scope="row">Sélectionner un pays.</th>
+					<td>NVDA annonce «&nbsp;choisissez le pays, liste déroulante, développée, éditable avec autocomplétion, [nom du pays]&nbsp;».</td>
+					<td>Jaws annonce «&nbsp;[nom du pays]&nbsp;».</td>
+					<td>VoiceOver annonce «&nbsp;[nom du pays], choisissez le pays, combobox&nbsp;». </td>
+				</tr>				
+			</table>
+<h3>Intégration</h3>
+<pre>
+<code class="html">
+/* HTML */
+	&lt;div class="acsa-textbox-border"&gt;
+		&lt;input type="text" id="choice" role="combobox" 
+		aria-expanded="false" aria-autocomplete="list" 
+		aria-owns="acsa-listbox" aria-readonly="true" data-start="" 
+		value="" class="acsa-textbox-list" tabindex="0" /&gt;
+		&lt;button class="acsa-open-close" type="button"&gt;
+		&lt;span aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="invisible"&gt;&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;ul role="listbox" class="acsa-autocomplete-listbox" id="acsa-listbox"&gt;
+		&lt;li role="option" data-value="Afghanistan"&gt;Afghanistan &lt;/li&gt;
+		[...]
+	&lt;/ul&gt;			
+</code>
+<code class="javascript">
+/*  Javascript */
+//Paramètres (composant_config.js)
+	autocomplete: {
+		autocomplete: 'acsa-autocomplete',
+		openClose: 'acsa-open-close',
+		openCloseOpen : 'acsa-open-close-open',
+		openCloseTxtClosed: 'afficher la liste des options',
+		openCloseTxtOpen : 'fermer la liste des options',
+		openCloseTxtOffscreen: 'invisible',
+		textboxInline: 'acsa-textbox-inline',
+		textboxList:  'acsa-textbox-list',
+		listBox: 'acsa-autocomplete-listbox',
+		listBoxOpen: 'acsa-autocomplete-listbox-open',
+		listOptionOn: 'acsa-list-higlight'
+	
+/* Initialisation */
+	var listDatepicker = document.getElementsByClassName( acsa_config.datepicker.datepicker );
+	var listAutocomplete = document.getElementsByClassName( acsa_config.autocomplete.autocomplete );
+	var autocomplete = new Array();
+	for ( var i = 0, len = listAutocomplete.length; i < len; i++ ){
+		autocomplete[i] = new Autocomplete( listAutocomplete[i], acsa_config.autocomplete.autocomplete );
+	}
+</code>
+</pre>
+			<div class="acsa-autocomplete">
+					<h4><span lang="en">Autocomplete list - editable</span></h4>
+					<label for="choiceEditable">Choisissez le pays</label><br />
+						<input type="text" id="choiceEditable" role="combobox" aria-expanded="false" aria-autocomplete="inline" aria-owns="acsa-listbox" data-start="" value="" class="acsa-textbox-inline" tabindex="0" />
+						<ul role="listbox" class="acsa-autocomplete-listbox" id="acsa-listbox-inline">
+							<li role="option" data-value="Afghanistan">Afghanistan </li>
+							<li role="option" data-value="Afrique_Centrale">Afrique_Centrale </li>
+							<li role="option" data-value="Afrique_du_sud">Afrique_du_Sud </li>
+							<li role="option" data-value="Albanie">Albanie </li>
+							<li role="option" data-value="Algerie">Algerie </li>
+							<li role="option" data-value="Allemagne">Allemagne </li>
+							<li role="option" data-value="Andorre">Andorre </li>
+							<li role="option" data-value="Angola">Angola </li>
+							<li role="option" data-value="Anguilla">Anguilla </li>
+							<li role="option" data-value="Arabie_Saoudite">Arabie_Saoudite </li>
+							<li role="option" data-value="Argentine">Argentine </li>
+							<li role="option" data-value="Armenie">Armenie </li>
+							<li role="option" data-value="Australie">Australie </li>
+							<li role="option" data-value="Autriche">Autriche </li>
+							<li role="option" data-value="Azerbaidjan">Azerbaidjan </li>
+							<li role="option" data-value="Bahamas">Bahamas </li>
+							<li role="option" data-value="Bangladesh">Bangladesh </li>
+							<li role="option" data-value="Barbade">Barbade </li>
+							<li role="option" data-value="Bahrein">Bahrein </li>
+							<li role="option" data-value="Belgique">Belgique </li>
+							<li role="option" data-value="Belize">Belize </li>
+							<li role="option" data-value="Benin">Benin </li>
+							<li role="option" data-value="Bermudes">Bermudes </li>
+							<li role="option" data-value="Bielorussie">Bielorussie </li>
+							<li role="option" data-value="Bolivie">Bolivie </li>
+							<li role="option" data-value="Botswana">Botswana </li>
+							<li role="option" data-value="Bhoutan">Bhoutan </li>
+							<li role="option" data-value="Boznie_Herzegovine">Boznie_Herzegovine </li>
+							<li role="option" data-value="Bresil">Bresil </li>
+							<li role="option" data-value="Brunei">Brunei </li>
+							<li role="option" data-value="Bulgarie">Bulgarie </li>
+							<li role="option" data-value="Burkina_Faso">Burkina_Faso </li>
+							<li role="option" data-value="Burundi">Burundi </li>
+							<li role="option" data-value="Caiman">Caiman </li>
+							<li role="option" data-value="Cambodge">Cambodge </li>
+							<li role="option" data-value="Cameroun">Cameroun </li>
+							<li role="option" data-value="Canada">Canada </li>
+							<li role="option" data-value="Canaries">Canaries </li>
+							<li role="option" data-value="Cap_vert">Cap_Vert </li>
+							<li role="option" data-value="Chili">Chili </li>
+							<li role="option" data-value="Chine">Chine </li>
+							<li role="option" data-value="Chypre">Chypre </li>
+							<li role="option" data-value="Colombie">Colombie </li>
+							<li role="option" data-value="Comores">Colombie </li>
+							<li role="option" data-value="Congo">Congo </li>
+							<li role="option" data-value="Congo_democratique">Congo_democratique </li>
+							<li role="option" data-value="Cook">Cook </li>
+							<li role="option" data-value="Coree_du_Nord">Coree_du_Nord </li>
+							<li role="option" data-value="Coree_du_Sud">Coree_du_Sud </li>
+							<li role="option" data-value="Costa_Rica">Costa_Rica </li>
+							<li role="option" data-value="Cote_d_Ivoire">Côte_d_Ivoire </li>
+							<li role="option" data-value="Croatie">Croatie </li>
+							<li role="option" data-value="Cuba">Cuba </li>
+							<li role="option" data-value="Danemark">Danemark </li>
+							<li role="option" data-value="Djibouti">Djibouti </li>
+							<li role="option" data-value="Dominique">Dominique </li>
+							<li role="option" data-value="Egypte">Egypte </li>
+							<li role="option" data-value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </li>
+							<li role="option" data-value="Equateur">Equateur </li>
+							<li role="option" data-value="Erythree">Erythree </li>
+							<li role="option" data-value="Espagne">Espagne </li>
+							<li role="option" data-value="Estonie">Estonie </li>
+							<li role="option" data-value="Etats_Unis">Etats_Unis </li>
+							<li role="option" data-value="Ethiopie">Ethiopie </li>
+							<li role="option" data-value="Falkland">Falkland </li>
+							<li role="option" data-value="Feroe">Feroe </li>
+							<li role="option" data-value="Fidji">Fidji </li>
+							<li role="option" data-value="Finlande">Finlande </li>
+							<li role="option" data-value="France">France </li>
+							<li role="option" data-value="Gabon">Gabon </li>
+							<li role="option" data-value="Gambie">Gambie </li>
+							<li role="option" data-value="Georgie">Georgie </li>
+							<li role="option" data-value="Ghana">Ghana </li>
+							<li role="option" data-value="Gibraltar">Gibraltar </li>
+							<li role="option" data-value="Grece">Grece </li>
+							<li role="option" data-value="Grenade">Grenade </li>
+							<li role="option" data-value="Groenland">Groenland </li>
+							<li role="option" data-value="Guadeloupe">Guadeloupe </li>
+							<li role="option" data-value="Guam">Guam </li>
+							<li role="option" data-value="Guatemala">Guatemala</li>
+							<li role="option" data-value="Guernesey">Guernesey </li>
+							<li role="option" data-value="Guinee">Guinee </li>
+							<li role="option" data-value="Guinee_Bissau">Guinee_Bissau </li>
+							<li role="option" data-value="Guinee equatoriale">Guinee_Equatoriale </li>
+							<li role="option" data-value="Guyana">Guyana </li>
+							<li role="option" data-value="Guyane_Francaise ">Guyane_Francaise </li>
+							<li role="option" data-value="Haiti">Haiti </li>
+							<li role="option" data-value="Hawaii">Hawaii </li>
+							<li role="option" data-value="Honduras">Honduras </li>
+							<li role="option" data-value="Hong_Kong">Hong_Kong </li>
+							<li role="option" data-value="Hongrie">Hongrie </li>
+							<li role="option" data-value="Inde">Inde </li>
+							<li role="option" data-value="Indonesie">Indonesie </li>
+							<li role="option" data-value="Iran">Iran </li>
+							<li role="option" data-value="Iraq">Iraq </li>
+							<li role="option" data-value="Irlande">Irlande </li>
+							<li role="option" data-value="Islande">Islande </li>
+							<li role="option" data-value="Israel">Israel </li>
+							<li role="option" data-value="Italie">italie </li>
+							<li role="option" data-value="Jamaique">Jamaique </li>
+							<li role="option" data-value="Jan Mayen">Jan Mayen </li>
+							<li role="option" data-value="Japon">Japon </li>
+							<li role="option" data-value="Jersey">Jersey </li>
+							<li role="option" data-value="Jordanie">Jordanie </li>
+							<li role="option" data-value="Kazakhstan">Kazakhstan </li>
+							<li role="option" data-value="Kenya">Kenya </li>
+							<li role="option" data-value="Kirghizstan">Kirghizistan </li>
+							<li role="option" data-value="Kiribati">Kiribati </li>
+							<li role="option" data-value="Koweit">Koweit </li>
+							<li role="option" data-value="Laos">Laos </li>
+							<li role="option" data-value="Lesotho">Lesotho </li>
+							<li role="option" data-value="Lettonie">Lettonie </li>
+							<li role="option" data-value="Liban">Liban </li>
+							<li role="option" data-value="Liberia">Liberia </li>
+							<li role="option" data-value="Liechtenstein">Liechtenstein </li>
+							<li role="option" data-value="Lituanie">Lituanie </li>
+							<li role="option" data-value="Luxembourg">Luxembourg </li>
+							<li role="option" data-value="Lybie">Lybie </li>
+							<li role="option" data-value="Macao">Macao </li>
+							<li role="option" data-value="Macedoine">Macedoine </li>
+							<li role="option" data-value="Madagascar">Madagascar </li>
+							<li role="option" data-value="Madère">Madère </li>
+							<li role="option" data-value="Malaisie">Malaisie </li>
+							<li role="option" data-value="Malawi">Malawi </li>
+							<li role="option" data-value="Maldives">Maldives </li>
+							<li role="option" data-value="Mali">Mali </li>
+							<li role="option" data-value="Malte">Malte </li>
+							<li role="option" data-value="Man">Man </li>
+							<li role="option" data-value="Mariannes du Nord">Mariannes du Nord </li>
+							<li role="option" data-value="Maroc">Maroc </li>
+							<li role="option" data-value="Marshall">Marshall </li>
+							<li role="option" data-value="Martinique">Martinique </li>
+							<li role="option" data-value="Maurice">Maurice </li>
+							<li role="option" data-value="Mauritanie">Mauritanie </li>
+							<li role="option" data-value="Mayotte">Mayotte </li>
+							<li role="option" data-value="Mexique">Mexique </li>
+							<li role="option" data-value="Micronesie">Micronesie </li>
+							<li role="option" data-value="Midway">Midway </li>
+							<li role="option" data-value="Moldavie">Moldavie </li>
+							<li role="option" data-value="Monaco">Monaco </li>
+							<li role="option" data-value="Mongolie">Mongolie </li>
+							<li role="option" data-value="Montserrat">Montserrat </li>
+							<li role="option" data-value="Mozambique">Mozambique </li>
+							<li role="option" data-value="Namibie">Namibie </li>
+							<li role="option" data-value="Nauru">Nauru </li>
+							<li role="option" data-value="Nepal">Nepal </li>
+							<li role="option" data-value="Nicaragua">Nicaragua </li>
+							<li role="option" data-value="Niger">Niger </li>
+							<li role="option" data-value="Nigeria">Nigeria </li>
+							<li role="option" data-value="Niue">Niue </li>
+							<li role="option" data-value="Norfolk">Norfolk </li>
+							<li role="option" data-value="Norvege">Norvege </li>
+							<li role="option" data-value="Nouvelle_Caledonie">Nouvelle_Caledonie </li>
+							<li role="option" data-value="Nouvelle_Zelande">Nouvelle_Zelande </li>
+							<li role="option" data-value="Oman">Oman </li>
+							<li role="option" data-value="Ouganda">Ouganda </li>
+							<li role="option" data-value="Ouzbekistan">Ouzbekistan </li>
+							<li role="option" data-value="Pakistan">Pakistan </li>
+							<li role="option" data-value="Palau">Palau </li>
+							<li role="option" data-value="Palestine">Palestine </li>
+							<li role="option" data-value="Panama">Panama </li>
+							<li role="option" data-value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </li>
+							<li role="option" data-value="Paraguay">Paraguay </li>
+							<li role="option" data-value="Pays_Bas">Pays_Bas </li>
+							<li role="option" data-value="Perou">Perou </li>
+							<li role="option" data-value="Philippines">Philippines </li>
+							<li role="option" data-value="Pologne">Pologne </li>
+							<li role="option" data-value="Polynesie">Polynesie </li>
+							<li role="option" data-value="Porto_Rico">Porto_Rico </li>
+							<li role="option" data-value="Portugal">Portugal </li>
+							<li role="option" data-value="Qatar">Qatar </li>
+							<li role="option" data-value="Republique_Dominicaine">Republique_Dominicaine </li>
+							<li role="option" data-value="Republique_Tcheque">Republique_Tcheque </li>
+							<li role="option" data-value="Reunion">Reunion </li>
+							<li role="option" data-value="Roumanie">Roumanie </li>
+							<li role="option" data-value="Royaume_Uni">Royaume_Uni </li>
+							<li role="option" data-value="Russie">Russie </li>
+							<li role="option" data-value="Rwanda">Rwanda </li>
+							<li role="option" data-value="Sahara Occidental">Sahara Occidental </li>
+							<li role="option" data-value="Sainte_Lucie">Sainte_Lucie </li>
+							<li role="option" data-value="Saint_Marin">Saint_Marin </li>
+							<li role="option" data-value="Salomon">Salomon </li>
+							<li role="option" data-value="Salvador">Salvador </li>
+							<li role="option" data-value="Samoa_Occidentales">Samoa_Occidentales</li>
+							<li role="option" data-value="Samoa_Americaine">Samoa_Americaine </li>
+							<li role="option" data-value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </li>
+							<li role="option" data-value="Senegal">Senegal </li>
+							<li role="option" data-value="Seychelles">Seychelles </li>
+							<li role="option" data-value="Sierra Leone">Sierra Leone </li>
+							<li role="option" data-value="Singapour">Singapour </li>
+							<li role="option" data-value="Slovaquie">Slovaquie </li>
+							<li role="option" data-value="Slovenie">Slovenie</li>
+							<li role="option" data-value="Somalie">Somalie </li>
+							<li role="option" data-value="Soudan">Soudan </li>
+							<li role="option" data-value="Sri_Lanka">Sri_Lanka </li>
+							<li role="option" data-value="Suede">Suede </li>
+							<li role="option" data-value="Suisse">Suisse </li>
+							<li role="option" data-value="Surinam">Surinam </li>
+							<li role="option" data-value="Swaziland">Swaziland </li>
+							<li role="option" data-value="Syrie">Syrie </li>
+							<li role="option" data-value="Tadjikistan">Tadjikistan </li>
+							<li role="option" data-value="Taiwan">Taiwan </li>
+							<li role="option" data-value="Tonga">Tonga </li>
+							<li role="option" data-value="Tanzanie">Tanzanie </li>
+							<li role="option" data-value="Tchad">Tchad </li>
+							<li role="option" data-value="Thailande">Thailande </li>
+							<li role="option" data-value="Tibet">Tibet </li>
+							<li role="option" data-value="Timor_Oriental">Timor_Oriental </li>
+							<li role="option" data-value="Togo">Togo </li>
+							<li role="option" data-value="Trinite_et_Tobago">Trinite_et_Tobago </li>
+							<li role="option" data-value="Tristan da cunha">Tristan de cuncha </li>
+							<li role="option" data-value="Tunisie">Tunisie </li>
+							<li role="option" data-value="Turkmenistan">Turmenistan </li>
+							<li role="option" data-value="Turquie">Turquie </li>
+							<li role="option" data-value="Ukraine">Ukraine </li>
+							<li role="option" data-value="Uruguay">Uruguay </li>
+							<li role="option" data-value="Vanuatu">Vanuatu </li>
+							<li role="option" data-value="Vatican">Vatican </li>
+							<li role="option" data-value="Venezuela">Venezuela </li>
+							<li role="option" data-value="Vierges_Americaines">Vierges_Americaines </li>
+							<li role="option" data-value="Vierges_Britanniques">Vierges_Britanniques </li>
+							<li role="option" data-value="Vietnam">Vietnam </li>
+							<li role="option" data-value="Wake">Wake </li>
+							<li role="option" data-value="Wallis et Futuma">Wallis et Futuma </li>
+							<li role="option" data-value="Yemen">Yemen </li>
+							<li role="option" data-value="Yougoslavie">Yougoslavie </li>
+							<li role="option" data-value="Zambie">Zambie </li>
+							<li role="option" data-value="Zimbabwe">Zimbabwe </li>
+						</ul>
+				</div>
+				</form>
+				 
+				<p>Un contenu tabulable après l'autocomplétion <a href="">Lien</a></p>
+				
+			</article>
+				<table class="acsa-table-result">
+				<caption> <span lang="en">autocomplete</span> - Tests fonctionnels <abbr title="Technologie d'assistance"> AT</abbr></caption>
+				<tr>
+					<th scope="col" lang="en">NVDA - Firefox 37.02 - Windows 8</th>
+					<th scope="col" lang="en">JAWS 15 - IE11 - Windows 8</th>
+					<th scope="col" lang="en">VoiceOver - Safari - OsX</th>
+				</tr>
+				<tr>
+					<td>KO</td>
+					<td>KO</td>
+					<td>KO</td>
+				</tr>
+			</table>
+			<p>Note&nbsp;: aucun lecteur d'écran n'offre de restitution satisfaisante.</p>
+			<footer>
+				<h3>Références</h3>
+				<ul>
+					<li><a lang="en" href="http://www.w3.org/WAI/PF/aria-practices/#datepicker">WAI-ARIA 1.0 Authoring Practices - Design Pattern - date picker</a></li>
 				</ul>
 			</footer>
 		</section>
@@ -672,3 +2050,4 @@ var listButton = document.getElementsByClassName( acsa_config.button.button );
 <script>AccessContent()</script>
 </body>
 </html>
+<html><head></head><body></body></html>

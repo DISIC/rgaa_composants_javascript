@@ -195,6 +195,7 @@ code{
 }
 .acsa-table-result{
  border:1px solid gray;
+ margin-top:2em;
 }
 .acsa-table-result caption{
  background-color:#003869;
@@ -241,7 +242,7 @@ code{
 	position:absolute;
 	z-index:4;
 	display:none;
-	top:20%;
+	top:35%;
 	left:35%;
 	width:25em;
 	height:15em;
@@ -683,6 +684,10 @@ ul[role='menubar'] ul[role='menu'] li{
 	color:#fff;
 	font-weight:bold;
 }
+.acsa-day-name{
+	position:absolute;
+	left:-1000000000px
+}
 /* autocomplete */
 .acsa-autocomplete{
 	position:relative;
@@ -739,4 +744,8 @@ ul[role='menubar'] ul[role='menu'] li{
 	position:relative;
 	border:1px solid gray;
 	width:17.8em;
+}
+.acsa-list-higlight{
+	background-color:#000;
+	color:#fff;
 }
