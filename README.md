@@ -1,4 +1,4 @@
-# Présentation #
+# Présentation
 
 Cette plateforme de test présente les implémentations des composants ARIA telles qu'elles sont définies par les motifs de conception.
 
@@ -10,7 +10,7 @@ Note 1 : certains enrichissements, nécessaires à une restitution correcte, son
 
 Note 2 : les interactions au clavier sont limitées à celles requises par le référentiel.
 
-## Liste des composants de cette section : ##
+## Liste des composants de cette section :
 
 - Potentiomètre
 - Barre de progression
@@ -24,3 +24,7 @@ Note 2 : les interactions au clavier sont limitées à celles requises par le r�
 - arborescence
 - calendrier de saisie
 - liste d'autocomplétion
+
+## Consultation en ligne :
+
+Cette plateforme de test est également consultable en ligne à l'adresse suivante http://disic.github.io/rgaa_composants_javascript/
